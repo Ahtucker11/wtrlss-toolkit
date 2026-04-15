@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTRLSS — Brand Toolkit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: #C4623A; color: #fff; }
+
+    :root {
+      --night: #141210;
+      --dusk: #1E1A17;
+      --dusk-mid: #252018;
+      --sand: #F5F0E8;
+      --sand-dark: #EAE3D8;
+      --white: #FFFFFF;
+      --clay: #C4623A;
+      --clay-light: #D4845E;
+      --clay-dark: #8A3E22;
+      --sage: #5C7A5E;
+      --sage-light: #7A9E7C;
+      --denim: #2C4A6E;
+      --denim-mid: #3D6491;
+      --text-dark: #F0EBE3;
+      --text-muted: #9A8F84;
+      --text-light: #1A1410;
+      --text-muted-light: #6B5F55;
+      --rule-dark: rgba(240,235,227,0.1);
+      --rule-light: rgba(26,20,16,0.1);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--night);
+      color: var(--text-dark);
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(20,18,16,0.97);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule-dark);
+    }
+    .nav-logo { height: 16px; width: auto; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .nav-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sage-light); }
+    .nav-date {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--sage-light);
+    }
+
+    /* ── TABS ── */
+    .tab-bar {
+      display: flex; align-items: center; gap: 0;
+      padding: 0 48px;
+      background: var(--dusk);
+      border-bottom: 1px solid var(--rule-dark);
+    }
+    .tab-btn {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 18px 28px;
+      background: none; border: none; cursor: pointer;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      position: relative; bottom: -1px;
+    }
+    .tab-btn:hover { color: var(--text-dark); }
+    .tab-btn.active { color: var(--clay); border-bottom-color: var(--clay); }
+
+    /* ── TAB PANELS ── */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── HERO ── */
+    .toolkit-hero {
+      padding: 80px 80px 56px;
+      position: relative; overflow: hidden;
+    }
+    .toolkit-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/wtrlss-hero-desert-KZtfh3YM9TkpyHUrY2g6V4.png');
+      background-size: cover; background-position: center 40%;
+      opacity: 0.07; pointer-events: none;
+    }
+    .eyebrow {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+    }
+    .eyebrow-line { width: 32px; height: 1px; background: var(--clay); }
+    .eyebrow-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--clay);
+    }
+    .hero-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 700; line-height: 0.95;
+      letter-spacing: -2px; text-transform: uppercase;
+      color: var(--text-dark); margin-bottom: 20px;
+    }
+    .hero-h1 .accent { color: var(--clay); }
+    .hero-sub {
+      font-size: 15px; font-weight: 300; line-height: 1.7;
+      color: var(--text-muted); max-width: 480px;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      padding: 64px 80px;
+      border-bottom: 1px solid var(--rule-dark);
+    }
+    .section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--clay);
+      display: block; margin-bottom: 16px;
+    }
+    .section-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 700; line-height: 1.0;
+      letter-spacing: -1px; text-transform: uppercase;
+      color: var(--text-dark); margin-bottom: 40px;
+    }
+
+    /* ── SITEMAP SPECIFIC ── */
+    .phase-legend { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+    .phase-badge {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; padding: 5px 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .phase-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+    .nav-row { display: flex; gap: 2px; margin-bottom: 2px; }
+    .nav-col { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .nav-stem { width: 1px; height: 24px; }
+    .nav-box {
+      width: 100%; padding: 12px 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; text-align: center;
+    }
+    .sub-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2px; margin-bottom: 24px;
+    }
+    .sub-col {
+      background: rgba(240,235,227,0.03);
+      border: 1px solid var(--rule-dark);
+      padding: 10px 8px;
+    }
+    .sub-item {
+      font-size: 10px; color: var(--text-muted);
+      padding: 2px 0;
+      border-bottom: 1px solid var(--rule-dark);
+      margin-bottom: 2px;
+    }
+
+    .phase-row { margin-top: 0; margin-bottom: 16px; }
+    .phase-row-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .phase-items { display: flex; gap: 2px; }
+    .phase-item {
+      flex: 1; padding: 10px 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .phase-item-inner { font-size: 10px; font-weight: 600; margin-bottom: 4px; }
+    .phase-item-note { font-size: 10px; line-height: 1.4; }
+
+    .accordion { display: flex; flex-direction: column; gap: 2px; margin-top: 32px; }
+    .accordion-item { border: 1px solid var(--rule-dark); }
+    .accordion-header {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; gap: 20px;
+      padding: 20px 28px; text-align: left;
+    }
+    .accordion-header:hover { background: rgba(240,235,227,0.02); }
+    .accordion-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.5px;
+      text-transform: uppercase; color: var(--text-dark); flex: 1;
+    }
+    .accordion-url {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px;
+    }
+    .accordion-toggle { color: var(--text-muted); font-size: 18px; font-weight: 300; flex-shrink: 0; }
+    .accordion-body { padding: 0 28px 28px; display: none; }
+    .accordion-body.open { display: block; }
+    .meta-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px; margin-bottom: 20px;
+    }
+    .meta-cell { background: var(--dusk-mid); padding: 14px 16px; }
+    .meta-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--clay); margin-bottom: 6px;
+    }
+    .meta-value { font-size: 13px; font-weight: 300; color: var(--text-dark); line-height: 1.5; }
+    .blocks-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;
+    }
+    .block-row {
+      background: var(--dusk-mid); padding: 14px 16px;
+      display: flex; gap: 16px; align-items: flex-start;
+      margin-bottom: 2px;
+    }
+    .block-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px; font-weight: 600; color: var(--clay);
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .block-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+      text-transform: uppercase; color: var(--text-dark); margin-bottom: 4px;
+    }
+    .block-desc { font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.5; }
+    .block-note {
+      margin-top: 6px; padding-left: 12px;
+      border-left: 2px solid var(--clay);
+      font-size: 11px; font-weight: 400; color: var(--clay);
+      font-style: italic; line-height: 1.5;
+    }
+    .crosslinks { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+    .crosslink-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .crosslink-tag {
+      background: rgba(240,235,227,0.06);
+      border: 1px solid var(--rule-dark);
+      padding: 4px 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+
+    .open-questions { padding: 48px 80px; background: var(--dusk); border-top: 1px solid var(--rule-dark); }
+    .oq-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--clay);
+      display: block; margin-bottom: 20px;
+    }
+    .oq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .oq-card {
+      background: var(--night); padding: 20px 24px;
+      border-left: 3px solid var(--clay);
+    }
+    .oq-q {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;
+    }
+    .oq-ctx { font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.6; }
+
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+
+    /* ── DESIGN SYSTEM SPECIFIC ── */
+    .ds-section { padding: 64px 80px; border-bottom: 1px solid var(--rule-dark); }
+
+    .moodboard-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; }
+    .mood-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .mood-caption { background: var(--dusk); padding: 16px 20px; }
+    .mood-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--clay); margin-bottom: 10px;
+    }
+    .mood-note {
+      display: flex; gap: 10px; align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .mood-dash { color: var(--clay); font-size: 8px; flex-shrink: 0; }
+    .mood-text { font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.5; }
+
+    .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; margin-bottom: 32px; }
+    .swatch-block { }
+    .swatch-color { height: 100px; }
+    .swatch-info { background: var(--dusk); padding: 12px 14px; }
+    .swatch-hex { font-size: 12px; font-weight: 600; color: var(--text-dark); font-family: monospace; margin-bottom: 4px; }
+    .swatch-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
+    }
+    .swatch-role { font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-bottom: 4px; }
+    .swatch-usage { font-size: 10px; color: var(--clay); font-family: 'Space Grotesk', sans-serif; }
+    .copy-btn {
+      background: none; border: 1px solid var(--rule-dark);
+      color: var(--text-muted); padding: 3px 8px;
+      font-size: 9px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      transition: color 0.2s;
+    }
+    .copy-btn:hover { color: var(--sage-light); }
+
+    .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 32px; }
+    .type-card { background: var(--dusk); padding: 32px; }
+    .type-specimen-sg {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px; font-weight: 700; line-height: 1;
+      letter-spacing: -2px; text-transform: uppercase;
+      color: var(--text-dark); margin-bottom: 16px;
+    }
+    .type-specimen-dm {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px; font-weight: 300; line-height: 1.6;
+      color: var(--text-dark); margin-bottom: 16px;
+    }
+    .type-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--clay); margin-bottom: 6px;
+    }
+    .type-detail { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .texture-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; }
+    .texture-card { background: var(--dusk); padding: 0; overflow: hidden; }
+    .texture-preview {
+      height: 160px; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .texture-info { padding: 20px 24px; }
+    .texture-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px;
+    }
+    .texture-desc { font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.5; }
+
+    .logo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2px; }
+    .logo-card { padding: 32px 24px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .logo-img { height: 32px; width: auto; object-fit: contain; }
+    .logo-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--text-muted); text-align: center;
+    }
+
+    .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+    .voice-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .voice-item { border-left: 2px solid var(--clay); padding-left: 20px; margin-bottom: 20px; }
+    .voice-phrase {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px; font-weight: 600; color: var(--text-dark); margin-bottom: 4px;
+    }
+    .voice-phrase.strikethrough { text-decoration: line-through; color: var(--text-muted); }
+    .voice-context { font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.5; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--dusk); padding: 28px 80px;
+      border-top: 1px solid var(--rule-dark);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-left { display: flex; align-items: center; gap: 20px; }
+    .footer-logo { height: 12px; width: auto; }
+    .footer-text { font-size: 11px; color: var(--text-muted); }
+    .footer-right {
+      font-size: 10px; color: rgba(154,143,132,0.4);
+      letter-spacing: 2px; text-transform: uppercase;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* ── RULE ── */
+    .rule { height: 1px; background: var(--rule-dark); margin: 0 80px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <img class="nav-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
+    <div class="nav-right">
+      <span class="nav-label">LAB Denim × Jumpsuit — Internal</span>
+      <div class="nav-dot"></div>
+      <span class="nav-date">April 2026</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="toolkit-hero">
+    <div class="toolkit-hero-bg"></div>
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">WTRLSS Brand Toolkit</span>
+    </div>
+    <h1 class="hero-h1">Architecture<br><span class="accent">+</span> Visual<br>Language</h1>
+    <p class="hero-sub">Two reference documents for the WTRLSS website build — site architecture and the Mars Expedition design system. Internal use only.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- TABS -->
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('sitemap', this)">01 — Site Architecture</button>
+    <button class="tab-btn" onclick="switchTab('design', this)">02 — Visual Language</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TAB 1: SITEMAP -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="tab-sitemap" class="tab-panel active">
+
+    <div class="section">
+      <span class="section-label">Site Architecture — Sitemap v2</span>
+      <h2 class="section-h2">WTRLSS.COM — Page Structure</h2>
+
+      <!-- Phase legend -->
+      <div class="phase-legend">
+        <div class="phase-badge" style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);">
+          <div class="phase-dot" style="background:#C4623A;"></div>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C4623A;">Launch (Late May)</span>
+        </div>
+        <div class="phase-badge" style="background:rgba(92,122,94,0.12);border:1px solid rgba(92,122,94,0.4);">
+          <div class="phase-dot" style="background:#7A9E7C;"></div>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7A9E7C;">Phase 1 (Post-Launch)</span>
+        </div>
+        <div class="phase-badge" style="background:rgba(46,110,106,0.12);border:1px solid rgba(46,110,106,0.4);">
+          <div class="phase-dot" style="background:#3D8E89;"></div>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#3D8E89;">Phase 2 (Scale)</span>
+        </div>
+        <div class="phase-badge" style="background:rgba(154,143,132,0.08);border:1px solid rgba(154,143,132,0.25);">
+          <div class="phase-dot" style="background:#9A8F84;"></div>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#9A8F84;">TBD / Pending</span>
+        </div>
+      </div>
+
+      <!-- Nav row -->
+      <div class="nav-row">
+        <div class="nav-col">
+          <div class="nav-stem" style="background:rgba(196,98,58,0.4);"></div>
+          <div class="nav-box" style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);color:#C4623A;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#7A9E7C;margin:0 auto 6px;"></div>
+            Home
+          </div>
+        </div>
+        <div class="nav-col">
+          <div class="nav-stem" style="background:rgba(196,98,58,0.4);"></div>
+          <div class="nav-box" style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);color:#C4623A;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#9A8F84;margin:0 auto 6px;"></div>
+            The Technology
+          </div>
+        </div>
+        <div class="nav-col">
+          <div class="nav-stem" style="background:rgba(196,98,58,0.4);"></div>
+          <div class="nav-box" style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);color:#C4623A;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#7A9E7C;margin:0 auto 6px;"></div>
+            For Brands
+          </div>
+        </div>
+        <div class="nav-col">
+          <div class="nav-stem" style="background:rgba(196,98,58,0.4);"></div>
+          <div class="nav-box" style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);color:#C4623A;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#7A9E7C;margin:0 auto 6px;"></div>
+            For Mills
+          </div>
+        </div>
+        <div class="nav-col">
+          <div class="nav-stem" style="background:rgba(196,98,58,0.4);"></div>
+          <div class="nav-box" style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);color:#C4623A;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#9A8F84;margin:0 auto 6px;"></div>
+            Sustainability
+          </div>
+        </div>
+        <div class="nav-col">
+          <div class="nav-stem" style="background:rgba(92,122,94,0.4);"></div>
+          <div class="nav-box" style="background:rgba(92,122,94,0.12);border:1px solid rgba(92,122,94,0.4);color:#7A9E7C;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#9A8F84;margin:0 auto 6px;"></div>
+            Company
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-pages row -->
+      <div class="sub-row">
+        <div class="sub-col">
+          <div class="sub-item">Design Without Limits hero</div>
+          <div class="sub-item">Four pillars + stat bar</div>
+          <div class="sub-item">Pathway split routing</div>
+          <div class="sub-item">Email capture</div>
+        </div>
+        <div class="sub-col">
+          <div class="sub-item">How It Works</div>
+          <div class="sub-item">MultiActiv Dyes</div>
+          <div class="sub-item">White Paper gate</div>
+        </div>
+        <div class="sub-col">
+          <div class="sub-item">Sample Request</div>
+          <div class="sub-item">Co-Marketing Kit</div>
+          <div class="sub-item">Certified Badge</div>
+        </div>
+        <div class="sub-col">
+          <div class="sub-item">Business Case</div>
+          <div class="sub-item">Partner Inquiry</div>
+          <div class="sub-item">Certified Badge</div>
+        </div>
+        <div class="sub-col">
+          <div class="sub-item">Water Metrics</div>
+          <div class="sub-item">Certifications</div>
+          <div class="sub-item">Claims Library</div>
+        </div>
+        <div class="sub-col">
+          <div class="sub-item">Founders (Biggs + Dr. Mheidle)</div>
+          <div class="sub-item">Mission / Story</div>
+          <div class="sub-item">Press Kit</div>
+        </div>
+      </div>
+
+      <!-- SEO/LLM row -->
+      <div class="phase-row">
+        <div class="phase-row-label" style="color:#4A7CC7;">SEO / LLM Content Infrastructure — Phase 1–2</div>
+        <div class="phase-items">
+          <div class="phase-item" style="background:rgba(45,107,228,0.06);border:1px solid rgba(45,107,228,0.25);">
+            <div class="phase-item-inner" style="color:#4A7CC7;">Technical White Papers</div>
+            <div class="phase-item-note" style="color:var(--text-muted);">"The Science of Digital Dyeing"</div>
+          </div>
+          <div class="phase-item" style="background:rgba(45,107,228,0.06);border:1px solid rgba(45,107,228,0.25);">
+            <div class="phase-item-inner" style="color:#4A7CC7;">Regulatory Guides</div>
+            <div class="phase-item-note" style="color:var(--text-muted);">EU ESPR 2027, textile water standards</div>
+          </div>
+          <div class="phase-item" style="background:rgba(45,107,228,0.06);border:1px solid rgba(45,107,228,0.25);">
+            <div class="phase-item-inner" style="color:#4A7CC7;">Brand Partner Case Studies</div>
+            <div class="phase-item-note" style="color:var(--text-muted);">"How [Brand] Cut Water Use by 99.97%"</div>
+          </div>
+          <div class="phase-item" style="background:rgba(45,107,228,0.06);border:1px solid rgba(45,107,228,0.25);">
+            <div class="phase-item-inner" style="color:#4A7CC7;">FAQ &amp; Glossary</div>
+            <div class="phase-item-note" style="color:var(--text-muted);">AI answer box optimization</div>
+          </div>
+          <div class="phase-item" style="background:rgba(45,107,228,0.06);border:1px solid rgba(45,107,228,0.25);">
+            <div class="phase-item-inner" style="color:#4A7CC7;">Google Ads First-Mover</div>
+            <div class="phase-item-note" style="color:var(--text-muted);">"waterless denim dyeing" — uncrowded now</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 1 row -->
+      <div class="phase-row">
+        <div class="phase-row-label" style="color:#7A9E7C;">Phase 1 — Post-Launch</div>
+        <div class="phase-items">
+          <div class="phase-item" style="background:rgba(92,122,94,0.08);border:1px solid rgba(92,122,94,0.3);color:#7A9E7C;">Journal / Blog</div>
+          <div class="phase-item" style="background:rgba(92,122,94,0.08);border:1px solid rgba(92,122,94,0.3);color:#7A9E7C;">Certified Waterless™ Page</div>
+          <div class="phase-item" style="background:rgba(92,122,94,0.08);border:1px solid rgba(92,122,94,0.3);color:#7A9E7C;">Campaign Landing Pages</div>
+        </div>
+      </div>
+
+      <!-- Accordion: Page-by-page detail -->
+      <div class="accordion">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Page-by-Page Detail — Click to expand</div>
+
+        <!-- Homepage -->
+        <div class="accordion-item" id="acc-home">
+          <button class="accordion-header" onclick="toggleAcc('home')">
+            <div class="status-dot" style="background:#7A9E7C;"></div>
+            <span class="accordion-title">Homepage</span>
+            <span class="accordion-url">/</span>
+            <span style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);padding:3px 10px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C4623A;">Launch</span>
+            <span class="accordion-toggle" id="toggle-home">+</span>
+          </button>
+          <div class="accordion-body" id="body-home">
+            <div class="meta-grid">
+              <div class="meta-cell"><div class="meta-label">Audience</div><div class="meta-value">All — first touchpoint</div></div>
+              <div class="meta-cell"><div class="meta-label">Purpose</div><div class="meta-value">Establish the brand, route visitors to the right pathway, capture email</div></div>
+              <div class="meta-cell"><div class="meta-label">Primary CTA</div><div class="meta-value">Request a Sample / Explore Pathways</div></div>
+            </div>
+            <div class="blocks-label">Content Blocks</div>
+            <div class="block-row"><span class="block-num">01</span><div><div class="block-name">Hero</div><div class="block-desc">Full-viewport desert hero. Headline leads with creative liberation — not sustainability.</div><div class="block-note">"Design Without Limits. Dye Without Water."</div></div></div>
+            <div class="block-row"><span class="block-num">02</span><div><div class="block-name">Standard 0.0 / Technology Intro</div><div class="block-desc">Category-defining platform intro. WTRLSS Inside framing. Links to Technology page.</div></div></div>
+            <div class="block-row"><span class="block-num">03</span><div><div class="block-name">Three Pillars</div><div class="block-desc">Creativity / Speed / Innovation — each with a gut-check line from Eric's voice guide.</div></div></div>
+            <div class="block-row"><span class="block-num">04</span><div><div class="block-name">Pathway Split</div><div class="block-desc">Brand-led vs Mill-led routing. Full-viewport split screen.</div></div></div>
+            <div class="block-row"><span class="block-num">05</span><div><div class="block-name">Sustainability as Proof Layer</div><div class="block-desc">99.97% stat + tailwind quote. Positioned as supporting evidence, not the lead.</div><div class="block-note">"Regulatory pressure is not a threat. It's a tailwind."</div></div></div>
+            <div class="block-row"><span class="block-num">06</span><div><div class="block-name">WTRLSS Inside Badge</div><div class="block-desc">Certified Waterless badge section. Bureau Veritas / Stanford / Patent callouts.</div></div></div>
+            <div class="block-row"><span class="block-num">07</span><div><div class="block-name">Email Capture</div><div class="block-desc">Minimal email gate. "No eco-lectures. Just early access."</div></div></div>
+            <div class="crosslinks"><span class="crosslink-label">Cross-links to:</span><span class="crosslink-tag">The Technology</span><span class="crosslink-tag">For Brands</span><span class="crosslink-tag">For Mills</span><span class="crosslink-tag">Sustainability</span></div>
+          </div>
+        </div>
+
+        <!-- Technology -->
+        <div class="accordion-item" id="acc-tech">
+          <button class="accordion-header" onclick="toggleAcc('tech')">
+            <div class="status-dot" style="background:#9A8F84;"></div>
+            <span class="accordion-title">The Technology</span>
+            <span class="accordion-url">/technology</span>
+            <span style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);padding:3px 10px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C4623A;">Launch</span>
+            <span class="accordion-toggle" id="toggle-tech">+</span>
+          </button>
+          <div class="accordion-body" id="body-tech">
+            <div class="meta-grid">
+              <div class="meta-cell"><div class="meta-label">Audience</div><div class="meta-value">All — credibility anchor for brands, mills, press, investors</div></div>
+              <div class="meta-cell"><div class="meta-label">Purpose</div><div class="meta-value">Tell the science and process story. Establish WTRLSS as a platform, not a product.</div></div>
+              <div class="meta-cell"><div class="meta-label">Primary CTA</div><div class="meta-value">Request a Sample / Download White Paper</div></div>
+            </div>
+            <div class="blocks-label">Content Blocks</div>
+            <div class="block-row"><span class="block-num">01</span><div><div class="block-name">Hero</div><div class="block-desc">"Standard 0.0" — the world's first bio-based digital dyeing platform.</div><div class="block-note">Pending: Hunter's technology explainer doc</div></div></div>
+            <div class="block-row"><span class="block-num">02</span><div><div class="block-name">How It Works</div><div class="block-desc">Step-by-step process: 1 step replaces 10. Visual comparison — traditional wet process vs WTRLSS.</div><div class="block-note">Pending: Science explainer from Hunter</div></div></div>
+            <div class="block-row"><span class="block-num">03</span><div><div class="block-name">MultiActiv Dyes</div><div class="block-desc">Named chemistry — bio-based dye class. What it is, why it matters, how it differs from petrochemical dyes.</div><div class="block-note">Confirm: Is "MultiActiv Dyes" the public-facing name?</div></div></div>
+            <div class="block-row"><span class="block-num">04</span><div><div class="block-name">Dr. Mheidle Profile</div><div class="block-desc">Award-winning Swiss scientist, 30 years at engineering/bioscience/digital intersection. Credibility anchor.</div><div class="block-note">Need: Photo, bio, quote</div></div></div>
+            <div class="block-row"><span class="block-num">05</span><div><div class="block-name">Key Stats</div><div class="block-desc">55L vs. 1 tablespoon / 97% emissions reduction / 1 step replaces 10 / 3× faster.</div><div class="block-note">Use dyeing-process stats only — not full cotton lifecycle</div></div></div>
+            <div class="block-row"><span class="block-num">06</span><div><div class="block-name">White Paper Gate</div><div class="block-desc">Email capture for technical white paper download.</div><div class="block-note">Phase 1 — needs white paper asset from Hunter</div></div></div>
+            <div class="crosslinks"><span class="crosslink-label">Cross-links to:</span><span class="crosslink-tag">Sustainability</span><span class="crosslink-tag">For Brands</span><span class="crosslink-tag">For Mills</span></div>
+          </div>
+        </div>
+
+        <!-- For Brands -->
+        <div class="accordion-item" id="acc-brands">
+          <button class="accordion-header" onclick="toggleAcc('brands')">
+            <div class="status-dot" style="background:#7A9E7C;"></div>
+            <span class="accordion-title">For Brands</span>
+            <span class="accordion-url">/for-brands</span>
+            <span style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);padding:3px 10px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C4623A;">Launch</span>
+            <span class="accordion-toggle" id="toggle-brands">+</span>
+          </button>
+          <div class="accordion-body" id="body-brands">
+            <div class="meta-grid">
+              <div class="meta-cell"><div class="meta-label">Audience</div><div class="meta-value">Brand Innovation Directors, Creative Directors, Sustainability leads</div></div>
+              <div class="meta-cell"><div class="meta-label">Purpose</div><div class="meta-value">Convert brand interest into sample requests and partnership conversations</div></div>
+              <div class="meta-cell"><div class="meta-label">Primary CTA</div><div class="meta-value">Request a Sample</div></div>
+            </div>
+            <div class="blocks-label">Content Blocks</div>
+            <div class="block-row"><span class="block-num">01</span><div><div class="block-name">Hero</div><div class="block-desc">"If you can dream it, we can dye it." Design-first framing.</div></div></div>
+            <div class="block-row"><span class="block-num">02</span><div><div class="block-name">What's Possible</div><div class="block-desc">Complex gradients, hyper-customized designs, surgical precision at global scale.</div></div></div>
+            <div class="block-row"><span class="block-num">03</span><div><div class="block-name">Speed Section</div><div class="block-desc">Sample in days. Design-to-production in 6 months, not 18. Mid-season color renewal.</div><div class="block-note">"Imagination made instant"</div></div></div>
+            <div class="block-row"><span class="block-num">04</span><div><div class="block-name">Certified Waterless Badge</div><div class="block-desc">Badge application CTA. Bureau Veritas / Stanford callouts. Cross-links to For Mills.</div><div class="block-note">"Wear the badge. Own the story."</div></div></div>
+            <div class="block-row"><span class="block-num">05</span><div><div class="block-name">Co-Marketing Toolkit</div><div class="block-desc">Email-gated download. Name / Brand / Work Email capture.</div><div class="block-note">Copy placeholder — awaiting Eric's brand doc for final copy</div></div></div>
+            <div class="block-row"><span class="block-num">06</span><div><div class="block-name">Case Studies / Partners</div><div class="block-desc">Levi's confirmed (NDA). No brand names at launch — toggle on when NDA clears.</div><div class="block-note">Phase 1 — launch without named partners</div></div></div>
+            <div class="crosslinks"><span class="crosslink-label">Cross-links to:</span><span class="crosslink-tag">The Technology</span><span class="crosslink-tag">For Mills</span><span class="crosslink-tag">Sustainability</span></div>
+          </div>
+        </div>
+
+        <!-- For Mills -->
+        <div class="accordion-item" id="acc-mills">
+          <button class="accordion-header" onclick="toggleAcc('mills')">
+            <div class="status-dot" style="background:#7A9E7C;"></div>
+            <span class="accordion-title">For Mills</span>
+            <span class="accordion-url">/for-mills</span>
+            <span style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);padding:3px 10px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C4623A;">Launch</span>
+            <span class="accordion-toggle" id="toggle-mills">+</span>
+          </button>
+          <div class="accordion-body" id="body-mills">
+            <div class="meta-grid">
+              <div class="meta-cell"><div class="meta-label">Audience</div><div class="meta-value">Mill Operations Directors, Production Managers, Owners</div></div>
+              <div class="meta-cell"><div class="meta-label">Purpose</div><div class="meta-value">Make the business case for WTRLSS adoption. Route to partnership inquiry.</div></div>
+              <div class="meta-cell"><div class="meta-label">Primary CTA</div><div class="meta-value">Get in Touch / Partner Inquiry</div></div>
+            </div>
+            <div class="blocks-label">Content Blocks</div>
+            <div class="block-row"><span class="block-num">01</span><div><div class="block-name">Hero</div><div class="block-desc">"This isn't an upgrade. It's an evolution." Business case-first framing.</div></div></div>
+            <div class="block-row"><span class="block-num">02</span><div><div class="block-name">The Business Case</div><div class="block-desc">1 step replaces 10 / 45% faster / Zero wastewater / 100% bio-based. ROI framing.</div><div class="block-note">"You don't just survive the 21st century. You lead it."</div></div></div>
+            <div class="block-row"><span class="block-num">03</span><div><div class="block-name">Operational Advantages</div><div class="block-desc">No water infrastructure. No effluent treatment. Produce anywhere — nearshore, onshore, in the desert.</div></div></div>
+            <div class="block-row"><span class="block-num">04</span><div><div class="block-name">Certified Waterless Badge</div><div class="block-desc">Mill certification CTA. "Certify your mill. Attract better brands."</div><div class="block-note">Badge lives on both pathways — not siloed</div></div></div>
+            <div class="block-row"><span class="block-num">05</span><div><div class="block-name">Partner Inquiry Form</div><div class="block-desc">Mill name, location, current capacity, timeline, contact info. Replaces standalone Partners page.</div></div></div>
+            <div class="crosslinks"><span class="crosslink-label">Cross-links to:</span><span class="crosslink-tag">The Technology</span><span class="crosslink-tag">For Brands</span><span class="crosslink-tag">Sustainability</span></div>
+          </div>
+        </div>
+
+        <!-- Sustainability -->
+        <div class="accordion-item" id="acc-sus">
+          <button class="accordion-header" onclick="toggleAcc('sus')">
+            <div class="status-dot" style="background:#9A8F84;"></div>
+            <span class="accordion-title">Sustainability</span>
+            <span class="accordion-url">/sustainability</span>
+            <span style="background:rgba(196,98,58,0.12);border:1px solid rgba(196,98,58,0.4);padding:3px 10px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#C4623A;">Launch</span>
+            <span class="accordion-toggle" id="toggle-sus">+</span>
+          </button>
+          <div class="accordion-body" id="body-sus">
+            <div class="meta-grid">
+              <div class="meta-cell"><div class="meta-label">Audience</div><div class="meta-value">All — press, investors, regulatory, conscious consumers</div></div>
+              <div class="meta-cell"><div class="meta-label">Purpose</div><div class="meta-value">House the certifications, water metrics, and regulatory data. "The boring stuff, nicely housed."</div></div>
+              <div class="meta-cell"><div class="meta-label">Primary CTA</div><div class="meta-value">Download Certification Summary</div></div>
+            </div>
+            <div class="blocks-label">Content Blocks</div>
+            <div class="block-row"><span class="block-num">01</span><div><div class="block-name">Hero</div><div class="block-desc">"Regulatory pressure is not a threat. It's a tailwind." Hunter's line as the anchor.</div></div></div>
+            <div class="block-row"><span class="block-num">02</span><div><div class="block-name">Water Metrics</div><div class="block-desc">55L vs. 1 tablespoon. 99.97% reduction. 0.42kg CO₂ per jean.</div><div class="block-note">Use dyeing-process stats only — not full cotton lifecycle (3,781L is a greenwashing liability)</div></div></div>
+            <div class="block-row"><span class="block-num">03</span><div><div class="block-name">Certifications Table</div><div class="block-desc">Bureau Veritas RSL / Stanford validation / Patent portfolio. Status badges.</div><div class="block-note">Pending: Certification docs from WTRLSS team</div></div></div>
+            <div class="block-row"><span class="block-num">04</span><div><div class="block-name">Regulatory Landscape</div><div class="block-desc">EU Green Deal / US water regulations. WTRLSS as compliance solution, not just good intention.</div></div></div>
+            <div class="block-row"><span class="block-num">05</span><div><div class="block-name">Claims Library</div><div class="block-desc">Sourced, defensible claims. Eric is building this — prevents greenwashing liability.</div><div class="block-note">Pending: Claims library from Eric</div></div></div>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="accordion-item" id="acc-co">
+          <button class="accordion-header" onclick="toggleAcc('co')">
+            <div class="status-dot" style="background:#9A8F84;"></div>
+            <span class="accordion-title">Company</span>
+            <span class="accordion-url">/about</span>
+            <span style="background:rgba(92,122,94,0.12);border:1px solid rgba(92,122,94,0.4);padding:3px 10px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7A9E7C;">Phase 1</span>
+            <span class="accordion-toggle" id="toggle-co">+</span>
+          </button>
+          <div class="accordion-body" id="body-co">
+            <div class="meta-grid">
+              <div class="meta-cell"><div class="meta-label">Audience</div><div class="meta-value">Press, investors, potential partners, curious consumers</div></div>
+              <div class="meta-cell"><div class="meta-label">Purpose</div><div class="meta-value">Tell the founding story. Establish credibility through team and mission.</div></div>
+              <div class="meta-cell"><div class="meta-label">Primary CTA</div><div class="meta-value">Get in Touch</div></div>
+            </div>
+            <div class="blocks-label">Content Blocks</div>
+            <div class="block-row"><span class="block-num">01</span><div><div class="block-name">Mission</div><div class="block-desc">"We are creating the post-water era of fashion." / "The future of denim is dry."</div></div></div>
+            <div class="block-row"><span class="block-num">02</span><div><div class="block-name">Founding Team</div><div class="block-desc">Dr. Mickaël Mheidle (inventor, Swiss scientist) + Kareem "Biggs" Burke (co-founder, Roc-A-Fella / denim background).</div><div class="block-note">Need: Photos, bios, quotes. Biggs is a major cultural signal — confirm prominence at launch.</div></div></div>
+            <div class="block-row"><span class="block-num">03</span><div><div class="block-name">The Story</div><div class="block-desc">How a 19th century process became a 21st century platform. Origin of the technology.</div></div></div>
+            <div class="block-row"><span class="block-num">04</span><div><div class="block-name">Press / Media</div><div class="block-desc">Press kit download, media contact, logo assets.</div></div></div>
+          </div>
+        </div>
+
+      </div><!-- /accordion -->
+    </div><!-- /section -->
+
+    <!-- Open Questions -->
+    <div class="open-questions">
+      <span class="oq-label">Open Questions</span>
+      <div class="oq-grid">
+        <div class="oq-card">
+          <div class="oq-q">MultiActiv Dyes — public name?</div>
+          <div class="oq-ctx">The chemistry has a product name. Confirm whether it's public-facing on the website or internal language only.</div>
+        </div>
+        <div class="oq-card">
+          <div class="oq-q">Kareem "Biggs" Burke — prominence at launch?</div>
+          <div class="oq-ctx">Co-founder with major cultural credibility. Does he feature prominently on the Company page at launch, or is that held for the cultural moment (Paper Planes, Levi's)?</div>
+        </div>
+        <div class="oq-card">
+          <div class="oq-q">Brand color direction — what's coming?</div>
+          <div class="oq-ctx">WTRLSS's branding agency hasn't delivered assets yet. If they come back with teal/green, the current dark desert system needs rework. Need clarity on timeline and direction.</div>
+        </div>
+        <div class="oq-card">
+          <div class="oq-q">55L vs. 1 tablespoon — confirmed as primary stat?</div>
+          <div class="oq-ctx">This is the dyeing-process-only stat. Replaces 3,781L (which includes cotton growing and is a greenwashing liability). Confirm this is the approved framing.</div>
+        </div>
+        <div class="oq-card">
+          <div class="oq-q">Levi's — when does the NDA clear?</div>
+          <div class="oq-ctx">Hunter confirmed Levi's is locked. The brand partner spotlight on the site is scaffolded but toggled off. Need a date from Hunter to plan the Phase 1 content swap.</div>
+        </div>
+        <div class="oq-card">
+          <div class="oq-q">White paper / technology explainer — timeline?</div>
+          <div class="oq-ctx">Hunter committed to sending the science explainer and technology docs. The Technology page and white paper gate are both blocked on this.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
+        <span class="footer-text">Sitemap v2 — April 2026</span>
+      </div>
+      <span class="footer-right">LAB Denim × Jumpsuit — Confidential</span>
+    </div>
+
+  </div><!-- /tab-sitemap -->
+
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TAB 2: DESIGN SYSTEM -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="tab-design" class="tab-panel">
+
+    <!-- 01 The Concept -->
+    <div class="ds-section">
+      <span class="section-label">01 — The Concept</span>
+      <h2 class="section-h2">Mars Expedition</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:40px;">
+        <div>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:20px;">WTRLSS makes denim without water. The visual language should feel like it was designed by someone who could also make denim on Mars — a place with no water, no limits, and no room for waste.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);">The aesthetic is expedition-grade: dark, purposeful, warm. Not eco-brand green. Not tech-company blue. Desert night, rust, and the ghost of denim indigo.</p>
+        </div>
+        <div style="background:var(--dusk);padding:28px 32px;border-left:3px solid var(--clay);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;">Three Reference Points</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div><span style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);">Mars Surface</span> — rust-orange terrain, warm near-black sky, rover tracks in hostile terrain</div>
+            <div><span style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);">Desert Night</span> — dunes as dark silhouettes, stars as the only light, stillness with latent energy</div>
+            <div><span style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);">Denim as Texture</span> — indigo as material not brand color, warp/weft as graphic element, orange selvedge as accent</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--dusk-mid);padding:20px 28px;border-left:3px solid rgba(154,143,132,0.4);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">What We Aren't</div>
+        <div style="display:flex;gap:32px;flex-wrap:wrap;">
+          <span style="font-size:13px;color:var(--text-muted);text-decoration:line-through;">Eco-obsessed</span>
+          <span style="font-size:13px;color:var(--text-muted);text-decoration:line-through;">Water imagery</span>
+          <span style="font-size:13px;color:var(--text-muted);text-decoration:line-through;">Planet-first greens</span>
+          <span style="font-size:13px;color:var(--text-muted);text-decoration:line-through;">Tech-company blues</span>
+          <span style="font-size:13px;color:var(--text-muted);text-decoration:line-through;">Startup gradients</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Mood Board -->
+    <div class="ds-section">
+      <span class="section-label">02 — Mood Board</span>
+      <h2 class="section-h2">Visual References</h2>
+      <div class="moodboard-grid">
+        <div>
+          <img class="mood-img" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/ref-mars-panorama_18118ef5.jpg" alt="Mars panorama" />
+          <div class="mood-caption">
+            <div class="mood-heading">Mars Surface</div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Extract: rust-orange as primary accent</span></div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Warm near-black as background</span></div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Precision in hostile terrain = brand energy</span></div>
+          </div>
+        </div>
+        <div>
+          <img class="mood-img" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/ref-desert-night-stars_33848849.jpg" alt="Desert night" />
+          <div class="mood-caption">
+            <div class="mood-heading">Desert Night</div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Dunes as dark silhouettes</span></div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Stars as the only light source</span></div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Stillness with latent energy</span></div>
+          </div>
+        </div>
+        <div>
+          <img class="mood-img" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/ref-denim-weave_158fdb0f.jpg" alt="Denim weave" />
+          <div class="mood-caption">
+            <div class="mood-heading">Denim as Texture</div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Indigo blue as material, not brand color</span></div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Warp/weft weave as graphic element</span></div>
+            <div class="mood-note"><span class="mood-dash">—</span><span class="mood-text">Orange selvedge stitching as accent</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Color Palette -->
+    <div class="ds-section">
+      <span class="section-label">03 — Color Palette</span>
+      <h2 class="section-h2">The Mars Expedition Palette</h2>
+
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Primary Surfaces — Dark-First</div>
+      <div class="palette-grid" style="margin-bottom:32px;">
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#141210;border:1px solid rgba(240,235,227,0.1);"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#141210</code><button class="copy-btn" onclick="copyHex(this,'#141210')">Copy</button></div><div class="swatch-name">Night</div><div class="swatch-role">Primary background — desert night, warm near-black</div><div class="swatch-usage">Page backgrounds, hero sections</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#1E1A17;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#1E1A17</code><button class="copy-btn" onclick="copyHex(this,'#1E1A17')">Copy</button></div><div class="swatch-name">Dusk</div><div class="swatch-role">Secondary surface — slightly lifted dark</div><div class="swatch-usage">Card backgrounds, section alternates</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#252018;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#252018</code><button class="copy-btn" onclick="copyHex(this,'#252018')">Copy</button></div><div class="swatch-name">Dusk Mid</div><div class="swatch-role">Tertiary surface — hover states</div><div class="swatch-usage">Hover states, active panels</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#F5F0E8;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#F5F0E8</code><button class="copy-btn" onclick="copyHex(this,'#F5F0E8')">Copy</button></div><div class="swatch-name">Sand</div><div class="swatch-role">Light surface — desert sand, warm cream</div><div class="swatch-usage">Modal backgrounds, light sections, hang-tags</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#EAE3D8;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#EAE3D8</code><button class="copy-btn" onclick="copyHex(this,'#EAE3D8')">Copy</button></div><div class="swatch-name">Sand Dark</div><div class="swatch-role">Darker sand — contrast on light</div><div class="swatch-usage">Light section alternates, form backgrounds</div></div>
+        </div>
+      </div>
+
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Accent Colors</div>
+      <div class="palette-grid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#C4623A;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#C4623A</code><button class="copy-btn" onclick="copyHex(this,'#C4623A')">Copy</button></div><div class="swatch-name">Clay</div><div class="swatch-role">Primary accent — Mars rust, selvedge orange</div><div class="swatch-usage">CTAs, highlights, section labels, stat bars</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#5C7A5E;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#5C7A5E</code><button class="copy-btn" onclick="copyHex(this,'#5C7A5E')">Copy</button></div><div class="swatch-name">Sage</div><div class="swatch-role">Secondary accent — muted sustainability signal</div><div class="swatch-usage">Phase 1 tags, certification badges, subtle accents</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#2C4A6E;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#2C4A6E</code><button class="copy-btn" onclick="copyHex(this,'#2C4A6E')">Copy</button></div><div class="swatch-name">Denim Blue</div><div class="swatch-role">Texture reference — not a brand color</div><div class="swatch-usage">Use as texture/pattern only, never as flat fill</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#F0EBE3;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#F0EBE3</code><button class="copy-btn" onclick="copyHex(this,'#F0EBE3')">Copy</button></div><div class="swatch-name">Text on Dark</div><div class="swatch-role">Primary text on dark backgrounds</div><div class="swatch-usage">Body text, headings on dark</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Typography -->
+    <div class="ds-section">
+      <span class="section-label">04 — Typography</span>
+      <h2 class="section-h2">Type System</h2>
+      <div class="type-grid" style="margin-bottom:32px;">
+        <div class="type-card">
+          <div class="type-specimen-sg">Space<br>Grotesk</div>
+          <div class="type-name">Space Grotesk — Display</div>
+          <div class="type-detail">Headlines, nav, labels, CTAs, eyebrows. Always uppercase for headings. Weight 700 for display, 600 for labels, 500 for nav. Letter-spacing: −2px for large display, +2–3px for small uppercase labels.</div>
+        </div>
+        <div class="type-card">
+          <div class="type-specimen-dm">DM Sans — body type for longer-form content. Readable at small sizes, warm without being casual. Use weight 300 for body, 400 for UI, 600 for emphasis.</div>
+          <div class="type-name">DM Sans — Body</div>
+          <div class="type-detail">Body copy, descriptions, form labels, captions. Never uppercase. Weight 300 for long-form, 400 for UI elements, 600 for emphasis. Line-height 1.6–1.8 for readability.</div>
+        </div>
+      </div>
+      <div style="background:var(--dusk);padding:24px 28px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Typography Rules</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="border-left:2px solid var(--clay);padding-left:16px;"><div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">Headlines always uppercase</div><div style="font-size:12px;color:var(--text-muted);">Space Grotesk + uppercase + tight tracking = expedition authority</div></div>
+          <div style="border-left:2px solid var(--clay);padding-left:16px;"><div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">Never use Inter</div><div style="font-size:12px;color:var(--text-muted);">Inter is the default AI-slop font. Space Grotesk + DM Sans is the system.</div></div>
+          <div style="border-left:2px solid var(--clay);padding-left:16px;"><div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">Tight tracking on large display</div><div style="font-size:12px;color:var(--text-muted);">letter-spacing: −1px to −2px on headlines above 40px</div></div>
+          <div style="border-left:2px solid var(--clay);padding-left:16px;"><div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">Wide tracking on small labels</div><div style="font-size:12px;color:var(--text-muted);">letter-spacing: +2px to +3px on 9–11px uppercase labels</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Texture & Pattern -->
+    <div class="ds-section">
+      <span class="section-label">05 — Texture &amp; Pattern</span>
+      <h2 class="section-h2">Signature Elements</h2>
+      <div class="texture-grid">
+        <div class="texture-card">
+          <div class="texture-preview" style="background:#1E1A17;">
+            <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(240,235,227,0.03) 0px,rgba(240,235,227,0.03) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(240,235,227,0.03) 0px,rgba(240,235,227,0.03) 1px,transparent 1px,transparent 40px);"></div>
+            <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(240,235,227,0.3);position:relative;z-index:1;">Warm Grid</span>
+          </div>
+          <div class="texture-info">
+            <div class="texture-name">Warm Grid Overlay</div>
+            <div class="texture-desc">Subtle 40px grid on dark sections. Adds depth without distraction. Opacity 0.03 — barely visible, always present.</div>
+          </div>
+        </div>
+        <div class="texture-card">
+          <div class="texture-preview" style="background:#141210;display:flex;align-items:center;justify-content:center;">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Symbol-TM-White_RGB_cdfc565c.png" alt="W symbol" style="height:120px;width:auto;opacity:0.06;" />
+          </div>
+          <div class="texture-info">
+            <div class="texture-name">Ghost W Symbol</div>
+            <div class="texture-desc">Oversized W mark at 4–8% opacity. Anchors hero sections and large panels. Never centered — always offset right or partially cropped.</div>
+          </div>
+        </div>
+        <div class="texture-card">
+          <div class="texture-preview" style="background:linear-gradient(135deg,#C4623A 0%,#8A3E22 100%);display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;">
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700;color:white;line-height:1;">99.97%</div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.7);">Less Water</div>
+            </div>
+          </div>
+          <div class="texture-info">
+            <div class="texture-name">Clay Stat Bar</div>
+            <div class="texture-desc">Full-width clay gradient strip for key statistics. Used once per page. The most visually dominant non-hero element.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 Logo Usage -->
+    <div class="ds-section">
+      <span class="section-label">06 — Logo Usage</span>
+      <h2 class="section-h2">Brand Marks</h2>
+      <div class="logo-grid">
+        <div class="logo-card" style="background:#141210;border:1px solid rgba(240,235,227,0.1);">
+          <img class="logo-img" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="Logo White" />
+          <div class="logo-label" style="color:var(--text-muted);">Logo — White<br>On dark backgrounds</div>
+        </div>
+        <div class="logo-card" style="background:#F5F0E8;border:1px solid rgba(26,20,16,0.1);">
+          <img class="logo-img" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-Black_RGB_a83900ce.png" alt="Logo Black" />
+          <div class="logo-label" style="color:var(--text-muted-light);">Logo — Black<br>On light backgrounds</div>
+        </div>
+        <div class="logo-card" style="background:#141210;border:1px solid rgba(240,235,227,0.1);">
+          <img class="logo-img" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Symbol-TM-White_RGB_cdfc565c.png" alt="Symbol White" style="height:48px;" />
+          <div class="logo-label" style="color:var(--text-muted);">W Symbol — White<br>Favicon, icon, watermark</div>
+        </div>
+        <div class="logo-card" style="background:#F5F0E8;border:1px solid rgba(26,20,16,0.1);">
+          <img class="logo-img" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Symbol-TM-Black_RGB_73d9638c.png" alt="Symbol Black" style="height:48px;" />
+          <div class="logo-label" style="color:var(--text-muted-light);">W Symbol — Black<br>On light backgrounds</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Voice & Language -->
+    <div class="ds-section">
+      <span class="section-label">07 — Voice &amp; Language</span>
+      <h2 class="section-h2">Brand Copy Principles</h2>
+      <div class="voice-grid">
+        <div>
+          <div class="voice-label" style="color:var(--sage-light);">Lead with these</div>
+          <div class="voice-item"><div class="voice-phrase">"Design Without Limits. Dye Without Water."</div><div class="voice-context">Hero headline — creativity and waterless, in that order</div></div>
+          <div class="voice-item"><div class="voice-phrase">"Standard 0.0"</div><div class="voice-context">Technology positioning — the category-defining platform</div></div>
+          <div class="voice-item"><div class="voice-phrase">"Guilt-free expression"</div><div class="voice-context">Community pillar — consumer-facing, desire-first</div></div>
+          <div class="voice-item"><div class="voice-phrase">"It's not a threat. It's a tailwind."</div><div class="voice-context">Sustainability framing — regulatory pressure reframed</div></div>
+          <div class="voice-item"><div class="voice-phrase">"WTRLSS Inside"</div><div class="voice-context">Ingredient brand — the Gore-Tex of denim</div></div>
+          <div class="voice-item"><div class="voice-phrase">"55L vs. 1 tablespoon"</div><div class="voice-context">Water stat — use this, not 3,781L (that includes cotton growing)</div></div>
+          <div class="voice-item"><div class="voice-phrase">"MultiActiv Dyes"</div><div class="voice-context">Chemistry product name — the bio-based dye class (confirm public-facing)</div></div>
+        </div>
+        <div>
+          <div class="voice-label" style="color:var(--clay);">Avoid these</div>
+          <div class="voice-item" style="opacity:0.7;"><div class="voice-phrase strikethrough">Eco-obsessed / planet-first framing</div><div class="voice-context">The environment isn't the only thing on our audience's mind. Lead with creative and commercial value.</div></div>
+          <div class="voice-item" style="opacity:0.7;"><div class="voice-phrase strikethrough">"Sustainable fashion"</div><div class="voice-context">Positions WTRLSS in the same category as every greenwashing brand. It's a technology company.</div></div>
+          <div class="voice-item" style="opacity:0.7;"><div class="voice-phrase strikethrough">"3,781 liters of water"</div><div class="voice-context">Includes cotton growing — WTRLSS doesn't change that. Use 55L vs. 1 tablespoon.</div></div>
+          <div class="voice-item" style="opacity:0.7;"><div class="voice-phrase strikethrough">Water imagery in visuals</div><div class="voice-context">Contradicts the waterless story. No oceans, rivers, or water droplets — ever.</div></div>
+          <div class="voice-item" style="opacity:0.7;"><div class="voice-phrase strikethrough">"Revolutionary" / "Game-changing"</div><div class="voice-context">Overused. Let the stats do the work. 99.97% is more powerful than any adjective.</div></div>
+          <div class="voice-item" style="opacity:0.7;"><div class="voice-phrase strikethrough">Jargon without context</div><div class="voice-context">"Bio-based chemistry" needs to be followed by what that means in plain language.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
+        <span class="footer-text">Design System v1 — April 2026</span>
+      </div>
+      <span class="footer-right">LAB Denim × Jumpsuit — Internal Reference</span>
+    </div>
+
+  </div><!-- /tab-design -->
+
+  <script>
+    function switchTab(id, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      btn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleAcc(id) {
+      const body = document.getElementById('body-' + id);
+      const toggle = document.getElementById('toggle-' + id);
+      const item = document.getElementById('acc-' + id);
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open');
+      toggle.textContent = isOpen ? '+' : '−';
+      item.style.borderColor = isOpen ? 'rgba(240,235,227,0.1)' : 'rgba(196,98,58,0.4)';
+      item.style.background = isOpen ? 'transparent' : '#1E1A17';
+    }
+
+    function copyHex(btn, hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        const orig = btn.textContent;
+        btn.textContent = 'Copied';
+        btn.style.color = '#7A9E7C';
+        setTimeout(() => { btn.textContent = orig; btn.style.color = ''; }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
