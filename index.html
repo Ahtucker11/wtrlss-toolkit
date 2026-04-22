@@ -12,19 +12,31 @@
     ::selection { background: #C4623A; color: #fff; }
 
     :root {
+      /* Narrative Mode — Mars expedition surfaces */
       --night: #141210;
-      --dusk: #1E1A17;
-      --dusk-mid: #252018;
+      --dusk: #252018;
       --sand: #F5F0E8;
       --sand-dark: #EAE3D8;
+
+      /* Brand Mode — agency-locked WTRLSS palette */
+      --wtrlss-navy: #283c6e;
+      --wtrlss-orange: #f28228;
+      --wtrlss-red: #b42626;
+      --wtrlss-cotton: #F2EEE8;
       --white: #FFFFFF;
+
+      /* Narrative Mode accent — Mars Clay sits between Stitch Orange and Selvedge Red.
+         Less loud than pure orange, lets denim + sage breathe. Brand Mode uses
+         --wtrlss-orange directly; Narrative Mode uses --clay. */
       --clay: #C4623A;
-      --clay-light: #D4845E;
-      --clay-dark: #8A3E22;
+      --clay-light: #D87A4C;
+      --clay-dark: #A14E2A;
+      --denim: #283c6e;       /* shared with WTRLSS Navy */
+      --denim-mid: #3d5791;
       --sage: #5C7A5E;
       --sage-light: #7A9E7C;
-      --denim: #2C4A6E;
-      --denim-mid: #3D6491;
+
+      /* Text + rules */
       --text-dark: #F0EBE3;
       --text-muted: #B5A99C;
       --text-light: #1A1410;
@@ -216,7 +228,7 @@
       display: grid; grid-template-columns: 1fr 1fr 1fr;
       gap: 2px; margin-bottom: 20px;
     }
-    .meta-cell { background: var(--dusk-mid); padding: 14px 16px; }
+    .meta-cell { background: var(--dusk); padding: 14px 16px; }
     .meta-label {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 9px; font-weight: 600; letter-spacing: 2px;
@@ -229,7 +241,7 @@
       text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;
     }
     .block-row {
-      background: var(--dusk-mid); padding: 14px 16px;
+      background: var(--dusk); padding: 14px 16px;
       display: flex; gap: 16px; align-items: flex-start;
       margin-bottom: 2px;
     }
@@ -423,7 +435,7 @@
       <span class="eyebrow-text">WTRLSS Brand Toolkit</span>
     </div>
     <h1 class="hero-h1">Architecture<br><span class="accent">+</span> Visual<br>Language</h1>
-    <p class="hero-sub">Two reference documents for the WTRLSS website build — site architecture and the Mars Expedition design system. Internal use only.</p>
+    <p class="hero-sub">Two reference documents for the WTRLSS website build — site architecture and the visual system. Two modes (Brand + Narrative), one language. Internal use only.</p>
   </div>
 
   <div class="rule"></div>
@@ -752,8 +764,8 @@
           <div class="oq-ctx">Co-founder with major cultural credibility. Does he feature prominently on the Company page at launch, or is that held for the cultural moment (Paper Planes, Levi's)?</div>
         </div>
         <div class="oq-card">
-          <div class="oq-q">Brand color direction — what's coming?</div>
-          <div class="oq-ctx">WTRLSS's branding agency hasn't delivered assets yet. If they come back with teal/green, the current dark desert system needs rework. Need clarity on timeline and direction.</div>
+          <div class="oq-q">Agency typography — what's the primary face?</div>
+          <div class="oq-ctx">Stage 03 PDF uses a tighter neo-grotesque (reads like Söhne / ABC Whyte family). Confirm the exact face and whether Space Grotesk is acceptable as the web/digital counterpart — or whether we need to license the agency face for web.</div>
         </div>
         <div class="oq-card">
           <div class="oq-q">55L vs. 1 tablespoon — confirmed as primary stat?</div>
@@ -804,7 +816,7 @@
           </div>
         </div>
       </div>
-      <div style="background:var(--dusk-mid);padding:20px 28px;border-left:3px solid rgba(154,143,132,0.4);">
+      <div style="background:var(--dusk);padding:20px 28px;border-left:3px solid rgba(154,143,132,0.4);">
         <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">What We Aren't</div>
         <div style="display:flex;gap:32px;flex-wrap:wrap;">
           <span style="font-size:13px;color:var(--text-muted);text-decoration:line-through;">Eco-obsessed</span>
@@ -816,9 +828,56 @@
       </div>
     </div>
 
-    <!-- 02 Mood Board -->
+    <!-- 02 Two Modes -->
     <div class="ds-section">
-      <span class="section-label">02 — Mood Board</span>
+      <span class="section-label">02 — Two Modes</span>
+      <h2 class="section-h2">One System, Two Modes</h2>
+      <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);max-width:720px;margin-bottom:40px;">The agency has delivered a <strong style="color:var(--text-dark);font-weight:600;">product-level brand system</strong> — hang tags, social templates, a palette sourced from denim itself. The toolkit extends that with a <strong style="color:var(--text-dark);font-weight:600;">narrative-level visual language</strong> for the website. Both coexist. Same underlying system, different contexts.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:32px;">
+        <!-- Brand Mode -->
+        <div style="background:var(--wtrlss-cotton);color:var(--text-light);padding:40px;border:1px solid var(--rule-light);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <div style="width:10px;height:10px;background:var(--wtrlss-orange);"></div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted-light);">Brand Mode — Stitch Orange</div>
+          </div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;line-height:1.05;letter-spacing:-1px;text-transform:uppercase;color:var(--text-light);margin-bottom:16px;">Where WTRLSS stands next to other brands</h3>
+          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted-light);margin-bottom:24px;">Cotton White on pure dark. Agency secondary palette. Editorial, reductive, material-first. Used for pages where WTRLSS is being compared, evaluated, or certified.</p>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted-light);margin-bottom:10px;">Use for</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">For Brands</li>
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">For Factories</li>
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">Sustainability / Certifications</li>
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">Hang tags, garment labels, social templates</li>
+          </ul>
+        </div>
+        <!-- Narrative Mode -->
+        <div style="background:var(--dusk);padding:40px;border:1px solid var(--rule-dark);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <div style="width:10px;height:10px;background:var(--clay);"></div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Narrative Mode — Mars Clay</div>
+          </div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;line-height:1.05;letter-spacing:-1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:16px;">Where WTRLSS tells its own story</h3>
+          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:24px;">Warm near-black surfaces. Desert night + ember + denim macro imagery. Mars Clay accent — quieter than Stitch Orange, lets denim and sage breathe. Used for pages where WTRLSS sets its own terms.</p>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Use for</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:13px;color:var(--text-dark);padding-left:12px;border-left:2px solid var(--clay);">Homepage hero</li>
+            <li style="font-size:13px;color:var(--text-dark);padding-left:12px;border-left:2px solid var(--clay);">The Technology / science origin</li>
+            <li style="font-size:13px;color:var(--text-dark);padding-left:12px;border-left:2px solid var(--clay);">Founder / Company story</li>
+            <li style="font-size:13px;color:var(--text-dark);padding-left:12px;border-left:2px solid var(--clay);">Animation, motion, editorial moments</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="background:var(--dusk);padding:24px 28px;border-left:3px solid var(--clay);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:12px;">The bridge between modes</div>
+        <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">Both modes share the same typography, the same W mark, and the same signature pattern (The Negative Viewer — fixed mark, variable content). What changes is the accent: Stitch Orange on product surfaces where WTRLSS sits next to other brands; Mars Clay on narrative surfaces where WTRLSS sets its own terms. Same system, two registers.</p>
+      </div>
+    </div>
+
+    <!-- 03 Mood Board -->
+    <div class="ds-section">
+      <span class="section-label">03 — Mood Board</span>
       <h2 class="section-h2">Visual References</h2>
       <div class="moodboard-grid">
         <div>
@@ -853,57 +912,71 @@
 
     <!-- 03 Color Palette -->
     <div class="ds-section">
-      <span class="section-label">03 — Color Palette</span>
-      <h2 class="section-h2">The Mars Expedition Palette</h2>
+      <span class="section-label">04 — Color Palette</span>
+      <h2 class="section-h2">The WTRLSS Palette</h2>
+      <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);max-width:640px;margin-bottom:40px;">Two modes, one system. Brand Mode is the agency-locked palette sourced from denim itself — used wherever WTRLSS stands next to other brands. Narrative Mode runs on Mars Clay — a quieter, rust-warm accent that sits between the agency's Stitch Orange and Selvedge Red, letting denim and sage breathe alongside it.</p>
 
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Primary Surfaces — Dark-First</div>
-      <div class="palette-grid" style="margin-bottom:32px;">
+      <!-- Brand Mode — Agency palette -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="width:10px;height:10px;background:var(--wtrlss-orange);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Brand Mode — Agency palette, sourced from denim</div>
+      </div>
+      <div class="palette-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:40px;">
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#141210;border:1px solid rgba(240,235,227,0.1);"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#141210</code><button class="copy-btn" onclick="copyHex(this,'#141210')">Copy</button></div><div class="swatch-name">Night</div><div class="swatch-role">Primary background — desert night, warm near-black</div><div class="swatch-usage">Page backgrounds, hero sections</div></div>
+          <div class="swatch-color" style="background:#283c6e;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#283c6e</code><button class="copy-btn" onclick="copyHex(this,'#283c6e')">Copy</button></div><div class="swatch-name">WTRLSS Navy</div><div class="swatch-role">Indigo reference — denim as material</div><div class="swatch-usage">Texture, accents, secondary surfaces</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#1E1A17;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#1E1A17</code><button class="copy-btn" onclick="copyHex(this,'#1E1A17')">Copy</button></div><div class="swatch-name">Dusk</div><div class="swatch-role">Secondary surface — slightly lifted dark</div><div class="swatch-usage">Card backgrounds, section alternates</div></div>
+          <div class="swatch-color" style="background:#f28228;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#f28228</code><button class="copy-btn" onclick="copyHex(this,'#f28228')">Copy</button></div><div class="swatch-name">WTRLSS Stitch Orange</div><div class="swatch-role">Primary accent — selvedge stitch, Mars rust</div><div class="swatch-usage">CTAs, highlights, section labels, stat bars</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#252018;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#252018</code><button class="copy-btn" onclick="copyHex(this,'#252018')">Copy</button></div><div class="swatch-name">Dusk Mid</div><div class="swatch-role">Tertiary surface — hover states</div><div class="swatch-usage">Hover states, active panels</div></div>
+          <div class="swatch-color" style="background:#b42626;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#b42626</code><button class="copy-btn" onclick="copyHex(this,'#b42626')">Copy</button></div><div class="swatch-name">WTRLSS Selvedge Red</div><div class="swatch-role">Secondary accent — selvedge stripe</div><div class="swatch-usage">Rare emphasis, editorial moments</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#F5F0E8;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#F5F0E8</code><button class="copy-btn" onclick="copyHex(this,'#F5F0E8')">Copy</button></div><div class="swatch-name">Sand</div><div class="swatch-role">Light surface — desert sand, warm cream</div><div class="swatch-usage">Modal backgrounds, light sections, hang-tags</div></div>
-        </div>
-        <div class="swatch-block">
-          <div class="swatch-color" style="background:#EAE3D8;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#EAE3D8</code><button class="copy-btn" onclick="copyHex(this,'#EAE3D8')">Copy</button></div><div class="swatch-name">Sand Dark</div><div class="swatch-role">Darker sand — contrast on light</div><div class="swatch-usage">Light section alternates, form backgrounds</div></div>
+          <div class="swatch-color" style="background:#F2EEE8;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#F2EEE8</code><button class="copy-btn" onclick="copyHex(this,'#F2EEE8')">Copy</button></div><div class="swatch-name">WTRLSS Cotton White</div><div class="swatch-role">Warm off-white — cotton reference</div><div class="swatch-usage">Light surfaces, hang tags, modals</div></div>
         </div>
       </div>
 
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Accent Colors</div>
-      <div class="palette-grid" style="grid-template-columns:repeat(4,1fr);">
+      <!-- Narrative Mode — Mars expedition surfaces -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="width:10px;height:10px;background:var(--clay);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Narrative Mode — Mars expedition surfaces</div>
+      </div>
+      <div class="palette-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:40px;">
         <div class="swatch-block">
           <div class="swatch-color" style="background:#C4623A;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#C4623A</code><button class="copy-btn" onclick="copyHex(this,'#C4623A')">Copy</button></div><div class="swatch-name">Clay</div><div class="swatch-role">Primary accent — Mars rust, selvedge orange</div><div class="swatch-usage">CTAs, highlights, section labels, stat bars</div></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#C4623A</code><button class="copy-btn" onclick="copyHex(this,'#C4623A')">Copy</button></div><div class="swatch-name">Mars Clay</div><div class="swatch-role">Narrative accent — sits between Stitch Orange and Selvedge Red</div><div class="swatch-usage">CTAs, labels, rules in Narrative Mode</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#5C7A5E;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#5C7A5E</code><button class="copy-btn" onclick="copyHex(this,'#5C7A5E')">Copy</button></div><div class="swatch-name">Sage</div><div class="swatch-role">Secondary accent — muted sustainability signal</div><div class="swatch-usage">Phase 1 tags, certification badges, subtle accents</div></div>
+          <div class="swatch-color" style="background:#141210;border:1px solid rgba(240,235,227,0.1);"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#141210</code><button class="copy-btn" onclick="copyHex(this,'#141210')">Copy</button></div><div class="swatch-name">Night</div><div class="swatch-role">Warm near-black — page base</div><div class="swatch-usage">Body, heroes, full-bleed sections</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#2C4A6E;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#2C4A6E</code><button class="copy-btn" onclick="copyHex(this,'#2C4A6E')">Copy</button></div><div class="swatch-name">Denim Blue</div><div class="swatch-role">Texture reference — not a brand color</div><div class="swatch-usage">Use as texture/pattern only, never as flat fill</div></div>
+          <div class="swatch-color" style="background:#252018;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#252018</code><button class="copy-btn" onclick="copyHex(this,'#252018')">Copy</button></div><div class="swatch-name">Dusk</div><div class="swatch-role">Lifted dark — every elevated surface</div><div class="swatch-usage">Cards, panels, tab bar, hover states</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#F0EBE3;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#F0EBE3</code><button class="copy-btn" onclick="copyHex(this,'#F0EBE3')">Copy</button></div><div class="swatch-name">Text on Dark</div><div class="swatch-role">Primary text on dark backgrounds</div><div class="swatch-usage">Body text, headings on dark</div></div>
+          <div class="swatch-color" style="background:#F5F0E8;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#F5F0E8</code><button class="copy-btn" onclick="copyHex(this,'#F5F0E8')">Copy</button></div><div class="swatch-name">Sand</div><div class="swatch-role">Desert sand — warm cream</div><div class="swatch-usage">Narrative light sections</div></div>
         </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#EAE3D8;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#EAE3D8</code><button class="copy-btn" onclick="copyHex(this,'#EAE3D8')">Copy</button></div><div class="swatch-name">Sand Dark</div><div class="swatch-role">Contrast on light surfaces</div><div class="swatch-usage">Form backgrounds, alternates</div></div>
+        </div>
+      </div>
+
+      <div style="background:var(--dusk);padding:20px 28px;border-left:3px solid var(--clay);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:8px;">Note on warm near-black</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Cotton White <code style="font-family:monospace;color:var(--text-dark);">#F2EEE8</code> is warm, not pure white. Night <code style="font-family:monospace;color:var(--text-dark);">#141210</code> continues that story on the dark end. Pure <code style="font-family:monospace;color:var(--text-dark);">#000</code> would break the warmth and read as a design anti-pattern.</div>
       </div>
     </div>
 
     <!-- 04 Typography -->
     <div class="ds-section">
-      <span class="section-label">04 — Typography</span>
+      <span class="section-label">05 — Typography</span>
       <h2 class="section-h2">Type System</h2>
       <div class="type-grid" style="margin-bottom:32px;">
         <div class="type-card">
@@ -930,11 +1003,11 @@
 
     <!-- 05 Texture & Pattern -->
     <div class="ds-section">
-      <span class="section-label">05 — Texture &amp; Pattern</span>
+      <span class="section-label">06 — Texture &amp; Pattern</span>
       <h2 class="section-h2">Signature Elements</h2>
       <div class="texture-grid">
         <div class="texture-card">
-          <div class="texture-preview" style="background:#1E1A17;">
+          <div class="texture-preview" style="background:#252018;">
             <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(240,235,227,0.03) 0px,rgba(240,235,227,0.03) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(240,235,227,0.03) 0px,rgba(240,235,227,0.03) 1px,transparent 1px,transparent 40px);"></div>
             <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(240,235,227,0.5);position:relative;z-index:1;">Warm Grid</span>
           </div>
@@ -953,23 +1026,93 @@
           </div>
         </div>
         <div class="texture-card">
-          <div class="texture-preview" style="background:linear-gradient(135deg,#C4623A 0%,#8A3E22 100%);display:flex;align-items:center;justify-content:center;">
+          <div class="texture-preview" style="background:linear-gradient(135deg,#f28228 0%,#b42626 100%);display:flex;align-items:center;justify-content:center;">
             <div style="text-align:center;">
               <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700;color:white;line-height:1;">99.97%</div>
               <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.7);">Less Water</div>
             </div>
           </div>
           <div class="texture-info">
-            <div class="texture-name">Clay Stat Bar</div>
-            <div class="texture-desc">Full-width clay gradient strip for key statistics. Used once per page. The most visually dominant non-hero element.</div>
+            <div class="texture-name">Stat Bar Gradient</div>
+            <div class="texture-desc">Full-width gradient strip for key statistics. Used once per page. Stitch Orange → Selvedge Red in Brand Mode (shown); Mars Clay → Clay Dark in Narrative Mode. The most visually dominant non-hero element.</div>
+          </div>
+        </div>
+
+        <!-- Double Arrow Reduction (agency) -->
+        <div class="texture-card">
+          <div class="texture-preview" style="background:url('images/animation/desert-arrows.png') center/cover no-repeat, #141210;"></div>
+          <div class="texture-info">
+            <div class="texture-name">Double Arrow Reduction</div>
+            <div class="texture-desc">The agency's core primitive — two downward arrows as the reduction gesture, and the origin of the W. Works as hero anchor, social template frame, stat emphasis. Pictured: arrows landed over desert dunes in the origin sequence.</div>
+          </div>
+        </div>
+
+        <!-- The Negative Viewer — the signature pattern; given 2 columns to match its role in the system -->
+        <div class="texture-card" style="grid-column:span 2;">
+          <div class="texture-preview" style="background:url('images/animation/ember-w.png') center/cover no-repeat, #141210;"></div>
+          <div class="texture-info">
+            <div class="texture-name">The Negative Viewer <span style="font-weight:400;color:var(--text-muted);">— signature pattern</span></div>
+            <div class="texture-desc">The signature WTRLSS gesture — a fixed graphical mark (W or double arrows) with real content living behind it. Swap the content, the frame stays. Here: embers. Elsewhere: denim, desert, cotton, partner fabric. Same move on hang tags, web heroes, animation, social.</div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- 07 Animation & Motion -->
+    <div class="ds-section">
+      <span class="section-label">07 — Animation &amp; Motion</span>
+      <h2 class="section-h2">The 6-Second Origin Sequence</h2>
+      <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);max-width:720px;margin-bottom:40px;">The brand's defining motion moment. Four beats, six seconds. Uses The Negative Viewer with swappable content to tell the WTRLSS origin in one gesture: <em>we made this in the hardest place, we arrived on the material.</em></p>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:32px;">
+        <div>
+          <img src="images/animation/ember-w.png" alt="Ember W mark" style="width:100%;height:220px;object-fit:cover;display:block;background:var(--wtrlss-cotton);" />
+          <div style="background:var(--dusk);padding:16px 20px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:6px;">0:00 — Origin</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Ember W</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Mars dust, forge, impossible beginning. Stitch Orange embers filling the W.</div>
+          </div>
+        </div>
+        <div>
+          <img src="images/animation/desert-arrows.png" alt="Desert dunes with arrows" style="width:100%;height:220px;object-fit:cover;display:block;" />
+          <div style="background:var(--dusk);padding:16px 20px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:6px;">0:02 — Expedition</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Desert Landing</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Arrows descend through desert dunes. The expedition arrives.</div>
+          </div>
+        </div>
+        <div>
+          <img src="images/animation/denim-macro.png" alt="Denim macro with arrows" style="width:100%;height:220px;object-fit:cover;display:block;" />
+          <div style="background:var(--dusk);padding:16px 20px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:6px;">0:03 — Material</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Denim Macro</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Landed on indigo + stitch orange. The bridge frame — agency's own palette in the expedition's key.</div>
+          </div>
+        </div>
+        <div>
+          <img src="images/animation/wordmark.png" alt="WTRLSS wordmark" style="width:100%;height:220px;object-fit:cover;display:block;background:var(--wtrlss-cotton);" />
+          <div style="background:var(--dusk);padding:16px 20px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:6px;">0:05 — Arrival</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Wordmark</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Lands clean. No decoration, no flourish. Just the name.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--dusk);padding:20px 28px;border-left:3px solid rgba(180,38,38,0.6);margin-bottom:24px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#e57070;margin-bottom:8px;">Rejected direction</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">The agency's first-round animation used <strong style="color:var(--text-dark);">red crashing water</strong> as the backdrop. This is antithetical to the brand — the entire visual thesis is <em>reduction of water</em>. A waterless brand cannot launch with water crashing into frame. Direction replaced with the desert / denim / ember sequence above.</div>
+      </div>
+
+      <div style="background:var(--dusk);padding:24px 28px;border-left:3px solid var(--clay);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:12px;">Why this works</div>
+        <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">Each frame is The Negative Viewer applied to a different content layer. The W (or double arrows) stay fixed; what's behind them rotates: fire → landscape → fabric → nothing. Every frame is on-brand because the primitive is consistent. The content tells the story.</p>
+      </div>
+    </div>
+
     <!-- 06 Logo Usage -->
     <div class="ds-section">
-      <span class="section-label">06 — Logo Usage</span>
+      <span class="section-label">08 — Logo Usage</span>
       <h2 class="section-h2">Brand Marks</h2>
       <div class="logo-grid">
         <div class="logo-card" style="background:#141210;border:1px solid rgba(240,235,227,0.1);">
@@ -993,7 +1136,7 @@
 
     <!-- 07 Voice & Language -->
     <div class="ds-section">
-      <span class="section-label">07 — Voice &amp; Language</span>
+      <span class="section-label">09 — Voice &amp; Language</span>
       <h2 class="section-h2">Brand Copy Principles</h2>
       <div class="voice-grid">
         <div>
@@ -1021,7 +1164,7 @@
     <div class="footer">
       <div class="footer-left">
         <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
-        <span class="footer-text">Design System v1 — April 2026</span>
+        <span class="footer-text">Design System v2.1 — April 2026 — Two Modes (Stitch Orange / Mars Clay)</span>
       </div>
       <span class="footer-right">LAB Denim × Jumpsuit — Internal Reference</span>
     </div>
@@ -1045,7 +1188,7 @@
       body.classList.toggle('open');
       toggle.textContent = isOpen ? '+' : '−';
       item.style.borderColor = isOpen ? 'rgba(240,235,227,0.1)' : 'rgba(196,98,58,0.4)';
-      item.style.background = isOpen ? 'transparent' : '#1E1A17';
+      item.style.background = isOpen ? 'transparent' : '#252018';
     }
 
     function copyHex(btn, hex) {
