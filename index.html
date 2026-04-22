@@ -14,8 +14,7 @@
     :root {
       /* Narrative Mode — Mars expedition surfaces */
       --night: #141210;
-      --dusk: #1E1A17;
-      --dusk-mid: #252018;
+      --dusk: #252018;
       --sand: #F5F0E8;
       --sand-dark: #EAE3D8;
 
@@ -229,7 +228,7 @@
       display: grid; grid-template-columns: 1fr 1fr 1fr;
       gap: 2px; margin-bottom: 20px;
     }
-    .meta-cell { background: var(--dusk-mid); padding: 14px 16px; }
+    .meta-cell { background: var(--dusk); padding: 14px 16px; }
     .meta-label {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 9px; font-weight: 600; letter-spacing: 2px;
@@ -242,7 +241,7 @@
       text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;
     }
     .block-row {
-      background: var(--dusk-mid); padding: 14px 16px;
+      background: var(--dusk); padding: 14px 16px;
       display: flex; gap: 16px; align-items: flex-start;
       margin-bottom: 2px;
     }
@@ -817,7 +816,7 @@
           </div>
         </div>
       </div>
-      <div style="background:var(--dusk-mid);padding:20px 28px;border-left:3px solid rgba(154,143,132,0.4);">
+      <div style="background:var(--dusk);padding:20px 28px;border-left:3px solid rgba(154,143,132,0.4);">
         <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">What We Aren't</div>
         <div style="display:flex;gap:32px;flex-wrap:wrap;">
           <span style="font-size:13px;color:var(--text-muted);text-decoration:line-through;">Eco-obsessed</span>
@@ -853,7 +852,7 @@
           </ul>
         </div>
         <!-- Narrative Mode -->
-        <div style="background:var(--dusk-mid);padding:40px;border:1px solid var(--rule-dark);">
+        <div style="background:var(--dusk);padding:40px;border:1px solid var(--rule-dark);">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
             <div style="width:10px;height:10px;background:var(--clay);"></div>
             <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Narrative Mode — Mars Clay</div>
@@ -946,22 +945,18 @@
         <div style="width:10px;height:10px;background:var(--clay);"></div>
         <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Narrative Mode — Mars expedition surfaces</div>
       </div>
-      <div class="palette-grid" style="grid-template-columns:repeat(6,1fr);margin-bottom:40px;">
+      <div class="palette-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:40px;">
         <div class="swatch-block">
           <div class="swatch-color" style="background:#C4623A;"></div>
           <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#C4623A</code><button class="copy-btn" onclick="copyHex(this,'#C4623A')">Copy</button></div><div class="swatch-name">Mars Clay</div><div class="swatch-role">Narrative accent — sits between Stitch Orange and Selvedge Red</div><div class="swatch-usage">CTAs, labels, rules in Narrative Mode</div></div>
         </div>
         <div class="swatch-block">
           <div class="swatch-color" style="background:#141210;border:1px solid rgba(240,235,227,0.1);"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#141210</code><button class="copy-btn" onclick="copyHex(this,'#141210')">Copy</button></div><div class="swatch-name">Night</div><div class="swatch-role">Warm near-black — desert night</div><div class="swatch-usage">Hero backgrounds, narrative sections</div></div>
-        </div>
-        <div class="swatch-block">
-          <div class="swatch-color" style="background:#1E1A17;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#1E1A17</code><button class="copy-btn" onclick="copyHex(this,'#1E1A17')">Copy</button></div><div class="swatch-name">Dusk</div><div class="swatch-role">Lifted dark — card surfaces</div><div class="swatch-usage">Section alternates, cards</div></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#141210</code><button class="copy-btn" onclick="copyHex(this,'#141210')">Copy</button></div><div class="swatch-name">Night</div><div class="swatch-role">Warm near-black — page base</div><div class="swatch-usage">Body, heroes, full-bleed sections</div></div>
         </div>
         <div class="swatch-block">
           <div class="swatch-color" style="background:#252018;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#252018</code><button class="copy-btn" onclick="copyHex(this,'#252018')">Copy</button></div><div class="swatch-name">Dusk Mid</div><div class="swatch-role">Hover states, elevated cards</div><div class="swatch-usage">Panels inside Night surfaces</div></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#252018</code><button class="copy-btn" onclick="copyHex(this,'#252018')">Copy</button></div><div class="swatch-name">Dusk</div><div class="swatch-role">Lifted dark — every elevated surface</div><div class="swatch-usage">Cards, panels, tab bar, hover states</div></div>
         </div>
         <div class="swatch-block">
           <div class="swatch-color" style="background:#F5F0E8;"></div>
@@ -973,7 +968,7 @@
         </div>
       </div>
 
-      <div style="background:var(--dusk-mid);padding:20px 28px;border-left:3px solid var(--clay);">
+      <div style="background:var(--dusk);padding:20px 28px;border-left:3px solid var(--clay);">
         <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:8px;">Note on warm near-black</div>
         <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Cotton White <code style="font-family:monospace;color:var(--text-dark);">#F2EEE8</code> is warm, not pure white. Night <code style="font-family:monospace;color:var(--text-dark);">#141210</code> continues that story on the dark end. Pure <code style="font-family:monospace;color:var(--text-dark);">#000</code> would break the warmth and read as a design anti-pattern.</div>
       </div>
@@ -1012,7 +1007,7 @@
       <h2 class="section-h2">Signature Elements</h2>
       <div class="texture-grid">
         <div class="texture-card">
-          <div class="texture-preview" style="background:#1E1A17;">
+          <div class="texture-preview" style="background:#252018;">
             <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(240,235,227,0.03) 0px,rgba(240,235,227,0.03) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(240,235,227,0.03) 0px,rgba(240,235,227,0.03) 1px,transparent 1px,transparent 40px);"></div>
             <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(240,235,227,0.5);position:relative;z-index:1;">Warm Grid</span>
           </div>
@@ -1104,7 +1099,7 @@
         </div>
       </div>
 
-      <div style="background:var(--dusk-mid);padding:20px 28px;border-left:3px solid rgba(180,38,38,0.6);margin-bottom:24px;">
+      <div style="background:var(--dusk);padding:20px 28px;border-left:3px solid rgba(180,38,38,0.6);margin-bottom:24px;">
         <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#e57070;margin-bottom:8px;">Rejected direction</div>
         <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">The agency's first-round animation used <strong style="color:var(--text-dark);">red crashing water</strong> as the backdrop. This is antithetical to the brand — the entire visual thesis is <em>reduction of water</em>. A waterless brand cannot launch with water crashing into frame. Direction replaced with the desert / denim / ember sequence above.</div>
       </div>
@@ -1193,7 +1188,7 @@
       body.classList.toggle('open');
       toggle.textContent = isOpen ? '+' : '−';
       item.style.borderColor = isOpen ? 'rgba(240,235,227,0.1)' : 'rgba(196,98,58,0.4)';
-      item.style.background = isOpen ? 'transparent' : '#1E1A17';
+      item.style.background = isOpen ? 'transparent' : '#252018';
     }
 
     function copyHex(btn, hex) {
