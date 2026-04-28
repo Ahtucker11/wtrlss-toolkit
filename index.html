@@ -422,7 +422,7 @@
   <nav class="nav">
     <img class="nav-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
     <div class="nav-right">
-      <span class="nav-label">LAB Denim × Jumpsuit — Internal</span>
+      <span class="nav-label">Waterless × Jumpsuit — Internal</span>
       <div class="nav-dot"></div>
       <span class="nav-date">April 2026</span>
     </div>
@@ -1460,7 +1460,7 @@
     <div class="footer">
       <div class="footer-left">
         <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
-        <span class="footer-text">Design System v2.6 — April 2026 — Wireframes Tab in Studio Mode</span>
+        <span class="footer-text">Design System v2.7 — April 2026 — All 6 Launch-Page Wireframes</span>
       </div>
       <span class="footer-right">LAB Denim × Jumpsuit — Internal Reference</span>
     </div>
@@ -1511,8 +1511,8 @@
         font-size: 12px; line-height: 1.55; color: var(--text-light);
       }
       #tab-wireframes .wf-question {
-        background: #FFFFFF; border: 1px solid rgba(196,98,58,0.35);
-        border-left: 4px solid var(--clay);
+        background: #FFFFFF; border: 1px solid rgba(196,98,58,0.3);
+        border-left: 3px solid var(--clay);
         padding: 16px 22px;
       }
       #tab-wireframes .wf-question-eyebrow {
@@ -1534,12 +1534,14 @@
       }
       #tab-wireframes .wf-block-row {
         background: var(--wtrlss-cotton); border: 1px solid var(--rule-light);
-        padding: 18px 22px; display: flex; gap: 18px; align-items: flex-start;
+        padding: 18px 22px; display: flex; gap: 22px; align-items: flex-start;
       }
       #tab-wireframes .wf-block-row + .wf-block-row { border-top: none; }
       #tab-wireframes .wf-block-num {
-        font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700;
-        color: var(--text-muted-light); flex-shrink: 0; margin-top: 3px; letter-spacing: 1px;
+        font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700;
+        color: var(--text-light); flex-shrink: 0; padding-right: 18px; margin-top: 1px;
+        letter-spacing: 1px; border-right: 1px solid var(--rule-light); align-self: stretch;
+        min-width: 14px;
       }
     </style>
 
@@ -1564,21 +1566,32 @@
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;">
         <div class="wf-card">
           <div class="wf-eyebrow" style="margin-bottom:8px;">Launch pages (May / June)</div>
           <div class="wf-body-muted">Homepage · The Technology · For Brands · For Factories · Sustainability · Company (Phase 1 stub at launch). Post-launch — Journal, Certified Waterless™, Campaign LPs — not wireframed here yet.</div>
         </div>
         <div class="wf-card">
           <div class="wf-eyebrow" style="margin-bottom:8px;">Status</div>
-          <div class="wf-body-muted">Homepage wireframe below sets the pattern. Remaining 5 launch pages will be added once style is approved.</div>
+          <div class="wf-body-muted">All 6 launch pages wireframed below. Built-state column reflects current wtrlss-site repo: hi-fi means a real Astro page exists; not built means no page in site yet.</div>
         </div>
+      </div>
+
+      <!-- Jump nav -->
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Jump to page</div>
+      <div style="display:flex;gap:22px;flex-wrap:wrap;">
+        <a href="#wf-page-home" class="wf-xlink">01 — Homepage</a>
+        <a href="#wf-page-technology" class="wf-xlink">02 — The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">03 — For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">04 — For Factories</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">05 — Sustainability</a>
+        <a href="#wf-page-company" class="wf-xlink">06 — Company</a>
       </div>
     </div>
 
 
     <!-- 01 Homepage -->
-    <div class="ds-section">
+    <div class="ds-section" id="wf-page-home">
       <span class="section-label">Page 01 of 6</span>
       <h2 class="section-h2">Homepage</h2>
       <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/ &nbsp;&nbsp;·&nbsp;&nbsp; First touchpoint &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
@@ -1699,10 +1712,545 @@
       <!-- Cross-links -->
       <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
         <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
-        <a href="#" class="wf-xlink">The Technology</a>
-        <a href="#" class="wf-xlink">For Brands</a>
-        <a href="#" class="wf-xlink">For Factories</a>
-        <a href="#" class="wf-xlink">Sustainability</a>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+      </div>
+    </div>
+
+
+    <!-- 02 The Technology -->
+    <div class="ds-section" id="wf-page-technology">
+      <span class="section-label">Page 02 of 6</span>
+      <h2 class="section-h2">The Technology</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/technology &nbsp;&nbsp;·&nbsp;&nbsp; Credibility anchor &nbsp;&nbsp;·&nbsp;&nbsp; Not yet built in wtrlss-site (exists in mockups)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">All — credibility anchor for brands, factories, press, investors</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Tell the science and process story. Establish WTRLSS as a platform, not a product.</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Request a Sample / Download White Paper</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">"Standard 0.0" — the world's first bio-based digital dyeing platform. Industry-accurate language, not consumer fluff.</div>
+            <div class="wf-note">Per Hunter on 4/22: "Use the language the industry uses. Otherwise we look like we don't know what we're talking about."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">How It Works</div>
+            <div class="wf-body-muted">Step-by-step process: 1 step replaces 10. Visual comparison — traditional wet process vs WTRLSS. Interactive if budget allows.</div>
+            <div class="wf-note">Pending: Eric's tech explainer doc + Hunter's deeper science slides. Machine photos NOT yet shot — placeholder for visual comparison.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">MultiActiv Dyes — the Multi-Reactive Category</div>
+            <div class="wf-body-muted">Named chemistry — bio-based dye class. What it is, why it differs from petrochemical dyes. Frame as the new <em>multi-reactive</em> category WTRLSS is creating.</div>
+            <div class="wf-note">Confirm with Hunter: is "MultiActiv Dyes" the public-facing name? Multi-reactive category framing was the 4/22 throughline — should it lead this page or the Hero block?</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Dr. Mheidle Profile</div>
+            <div class="wf-body-muted">Award-winning Swiss scientist, 30 years at the engineering / bioscience / digital intersection. Credibility anchor.</div>
+            <div class="wf-note">Need photo, bio, quote. Confirm spelling — sitemap doc and Granola transcripts have differed (Mheidle / Mighty / Mickaël).</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Key Stats</div>
+            <div class="wf-body-muted">99.97% water reduction · 97% emissions reduction · 30–45% capacity increase · 3× faster · 99% bio-based (1% is the ink).</div>
+            <div class="wf-note">Stat conflict still pending: 55L vs. 26 gallons (≈98L). Hunter call to confirm which is the canonical primary stat.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certifications</div>
+            <div class="wf-body-muted">Bureau Veritas RSL · Stanford validation · Patent portfolio. Cross-link to Sustainability for the full table.</div>
+            <div class="wf-note">Pending: certification docs from Waterless team.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">07</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">White Paper Gate</div>
+            <div class="wf-body-muted">Email capture for technical white paper download. "Want to know more — here's the deeper read."</div>
+            <div class="wf-note">Phase 1 — needs white paper asset from Hunter/Eric. Until then, this block holds a "coming soon" stub or is hidden.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Lead framing</div>
+          <div class="wf-question-h">Does the page lead with "Standard 0.0" or with "Multi-Reactive category creation"?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">4/22 call surfaced the multi-reactive framing as the throughline. Sitemap doc still leads with Standard 0.0. One can be hero, the other supports — which?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Depth tier</div>
+          <div class="wf-question-h">Hero couple-paragraphs vs. interactive deep-dive — what's the split?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Eric on 4/22: hero short, "want to know more" tier for technical depth. How interactive is the deep-dive — animated process diagram, or static visual?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Asset gating</div>
+          <div class="wf-question-h">Until machine photos exist, what holds the visual weight?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">No machine shoot yet. Placeholder options: process diagrams, denim macro from 4.13 shoot, illustrated diagram, or hold the page back until shoot lands.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+      </div>
+    </div>
+
+
+    <!-- 03 For Brands -->
+    <div class="ds-section" id="wf-page-for-brands">
+      <span class="section-label">Page 03 of 6</span>
+      <h2 class="section-h2">For Brands</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/for-brands &nbsp;&nbsp;·&nbsp;&nbsp; Brand-led pathway &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Brand Innovation Directors, Creative Directors, Sustainability leads</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Convert brand interest into sample requests and partnership conversations</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Request a Sample</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">Design-first framing. Creative liberation as the hook.</div>
+            <div class="wf-note">Working line: "If you can dream it, we can dye it." Voice pillar — invention with a hint of magic.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">What's Possible</div>
+            <div class="wf-body-muted">Complex gradients, hyper-customized designs, surgical precision at global scale. Visual examples of what only WTRLSS can do.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Speed Section</div>
+            <div class="wf-body-muted">Sample in days. Design-to-production in 6 months, not 18. Mid-season color renewal.</div>
+            <div class="wf-note">"Imagination made instant" — voice pillar throughline. "Production at the speed of culture" is an alt framing in the bank.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certified Waterless Badge</div>
+            <div class="wf-body-muted">Badge application CTA. Bureau Veritas / Stanford callouts. Cross-links to For Factories — badge lives on both pathways, not siloed.</div>
+            <div class="wf-note">"Wear the badge. Own the story."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Co-Marketing Toolkit</div>
+            <div class="wf-body-muted">Email-gated download. Name / Brand / Work Email capture. Toolkit contents list.</div>
+            <div class="wf-note">COPY PLACEHOLDER — awaiting Eric's brand doc for final copy.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Case Studies / Partners</div>
+            <div class="wf-body-muted">Partner roster module. Held off until July per partner-sequencing rule.</div>
+            <div class="wf-note">Pre-July: no named brands publicly. Triarchy quote candidate. Levi's reveal July 9–13. PacSun first-to-market August.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">07</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Sample Request Form</div>
+            <div class="wf-body-muted">Full form: name, brand, role, fabric type, timeline, notes. Phase 4 wires CRM-integrated lead capture.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Partner moment</div>
+          <div class="wf-question-h">Where does the Triarchy quote slot sit — here or homepage?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">If homepage holds the early partner moment, this page can stay clean. If For Brands is the partner-evidence page, the quote belongs in block 06.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Pre-July state</div>
+          <div class="wf-question-h">What does block 06 show before brand names can go public?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Options: hide block until July, "Major denim heritage brand — coming July" stub, generic case-study category cards, or skip entirely until reveals land.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Co-marketing kit timing</div>
+          <div class="wf-question-h">Toolkit gated download live at launch, or post-launch?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">If Eric's brand doc lands before June, this is launch-ready. If not, gate goes "Coming Soon" stub — preferable to placeholder copy.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+      </div>
+    </div>
+
+
+    <!-- 04 For Factories -->
+    <div class="ds-section" id="wf-page-for-factories">
+      <span class="section-label">Page 04 of 6</span>
+      <h2 class="section-h2">For Factories</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/for-factories &nbsp;&nbsp;·&nbsp;&nbsp; Factory-led pathway &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Factory Operations Directors, Production Managers, Owners</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Make the business case for WTRLSS adoption. Route to partnership inquiry.</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Get in Touch / Partner Inquiry</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">Business-case-first framing. Light variant of the homepage hero pattern.</div>
+            <div class="wf-note">Working line: "This isn't an upgrade. It's an evolution."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">The Business Case</div>
+            <div class="wf-body-muted">1 step replaces 10 · 30–45% faster · zero wastewater · 99% bio-based. ROI framing.</div>
+            <div class="wf-note">"You don't just survive the 21st century. You lead it."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Operational Advantages — Produce Anywhere</div>
+            <div class="wf-body-muted">No water infrastructure. No effluent treatment. Produce nearshore, onshore, in the desert. Absorbs the earlier "Produce Anywhere" pillar.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certified Waterless Badge</div>
+            <div class="wf-body-muted">Factory certification CTA. "Certify your factory. Attract better brands." Cross-links to For Brands.</div>
+            <div class="wf-note">Badge lives on both pathways — not siloed. Same badge content, different framing per audience.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Compliance as an Asset</div>
+            <div class="wf-body-muted">Regulatory tailwind section. EU Green Deal / US water regulations. "Turn sustainability from a constraint into a competitive advantage."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Partner Inquiry Form</div>
+            <div class="wf-body-muted">Factory name, location, current capacity, timeline, contact info. Replaces a standalone Partners page.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Asset readiness</div>
+          <div class="wf-question-h">Machine photos for credibility — what fills the gap until the shoot?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Factories want to see hardware. No machine photos yet. Use process diagrams, denim macro, or render — or hold this page until photos exist?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Compliance specificity</div>
+          <div class="wf-question-h">Which regulations to cite by name?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">EU Green Deal / ESPR 2027 / US wastewater rules — Eric to scope what's defensible without legal review pushback.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+      </div>
+    </div>
+
+
+    <!-- 05 Sustainability -->
+    <div class="ds-section" id="wf-page-sustainability">
+      <span class="section-label">Page 05 of 6</span>
+      <h2 class="section-h2">Sustainability</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/sustainability &nbsp;&nbsp;·&nbsp;&nbsp; Proof layer &nbsp;&nbsp;·&nbsp;&nbsp; Not yet built in wtrlss-site</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Press, investors, regulatory, conscious consumers</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">House the certifications, water metrics, and regulatory data. "The boring stuff, nicely housed."</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Download Certification Summary</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">"Regulatory pressure is not a threat. It's a tailwind." Hunter's anchor line.</div>
+            <div class="wf-note">Pending: Eric's sustainability copy. Voice register here is grounded and confident, not preachy.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Water Metrics</div>
+            <div class="wf-body-muted">Primary water stat · 99.97% reduction · 0.42kg CO₂ per jean. Sourced, verifiable.</div>
+            <div class="wf-note">Stat conflict pending Hunter call: 55L vs. 26 gallons (≈98L). Use dyeing-process stats only — not full cotton lifecycle (would invite greenwashing pushback).</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certifications Table</div>
+            <div class="wf-body-muted">Bureau Veritas RSL · Stanford validation · Patent portfolio. Status badges per item.</div>
+            <div class="wf-note">Pending: certification docs from Waterless team.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Regulatory Landscape</div>
+            <div class="wf-body-muted">EU Green Deal / ESPR 2027 / US water regulations. WTRLSS as a compliance solution, not just good intention.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Claims Library</div>
+            <div class="wf-body-muted">Sourced, defensible claims. Prevents greenwashing liability.</div>
+            <div class="wf-note">Pending: claims library from Eric. Public page or download-gated? Eric to scope.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certification Download Gate</div>
+            <div class="wf-body-muted">Email capture for certification summary PDF.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Visual treatment</div>
+          <div class="wf-question-h">"Boring stuff, nicely housed" — how table-heavy vs. editorial?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Lean on tables for credibility (regulatory feel) or editorialize each cert block (brand-feel)? Trade-off: scanability vs. warmth.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Stat resolution</div>
+          <div class="wf-question-h">Which water stat is the canonical primary?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Existing: 55L vs. 1 tablespoon. Brand Guide WIP: 26 gallons (≈98L) → 1 tablespoon. Different baselines? Hunter call resolves.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Claims gating</div>
+          <div class="wf-question-h">Claims library — public or download-only?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Public = transparency signal. Gated = lead-capture + signals seriousness. Eric's call.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+      </div>
+    </div>
+
+
+    <!-- 06 Company -->
+    <div class="ds-section" id="wf-page-company">
+      <span class="section-label">Page 06 of 6</span>
+      <h2 class="section-h2">Company</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/about &nbsp;&nbsp;·&nbsp;&nbsp; Phase 1 stub at launch &nbsp;&nbsp;·&nbsp;&nbsp; Thin in wtrlss-site (113 lines)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Press, investors, potential partners, curious consumers</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Tell the founding story. Establish credibility through team and mission.</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Get in Touch</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Mission</div>
+            <div class="wf-body-muted">"The future of denim is dry." Plus the post-water-era framing.</div>
+            <div class="wf-note">Vision statement is locked: "The future of denim is dry." Mission anchor: "Impossible is the new normal."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">SPC Acquisition — June Launch Story</div>
+            <div class="wf-body-muted">Waterless is acquiring SPC. The June launch piece. Frame as the platform getting bigger, not just the chemistry getting cooler.</div>
+            <div class="wf-note">NEW BLOCK — not in original sitemap. SPC was confirmed as part of June launch on the 4/22 call. Confirm: lives on Company, or its own page, or homepage Hero?</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Founding Team</div>
+            <div class="wf-body-muted">Dr. Mickaël Mheidle (inventor, Swiss scientist) + Kareem 'Biggs' Burke (co-founder, Roc-A-Fella, denim background).</div>
+            <div class="wf-note">Need photos, bios, quotes. Biggs is a major cultural signal — confirm prominence at launch vs. holding for the cultural moment (Paper Planes, Levi's reveal).</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">The Story</div>
+            <div class="wf-body-muted">How a 19th-century process became a 21st-century platform. Origin narrative.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Press / Media</div>
+            <div class="wf-body-muted">Press kit download, media contact, logo assets.</div>
+            <div class="wf-note">Phase 1 — fleshed out post-launch. At launch this can be a thin "press@waterless..." contact line + future home for press kit.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — SPC placement</div>
+          <div class="wf-question-h">SPC acquisition — Company page block, Homepage block, or its own page?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">June launch story includes the acquisition. Belongs in Company narrative, but might also need a homepage moment. Confirm with Hunter on his weight + visibility.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Biggs prominence</div>
+          <div class="wf-question-h">Lead with co-founder identity at launch, or hold for the cultural moment?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Cultural credibility lever. Argument for prominent: signals authenticity. Argument for held: bigger reveal moment with Paper Planes / Levi's tie-in.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Stub depth</div>
+          <div class="wf-question-h">What's the minimum viable Company page at launch?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Mission + SPC mention + small team blurb might be enough. Full founder profiles, story narrative, press kit can be Phase 1 post-launch. Confirm scope.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
       </div>
     </div>
 
@@ -1710,7 +2258,7 @@
     <div class="footer">
       <div class="footer-left">
         <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
-        <span class="footer-text">Design System v2.6 — April 2026 — Wireframes Tab in Studio Mode</span>
+        <span class="footer-text">Design System v2.7 — April 2026 — All 6 Launch-Page Wireframes</span>
       </div>
       <span class="footer-right">Waterless — Internal Reference</span>
     </div>
