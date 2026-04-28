@@ -1460,7 +1460,7 @@
     <div class="footer">
       <div class="footer-left">
         <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
-        <span class="footer-text">Design System v2.5 — April 2026 — Wireframes Tab Added (Homepage pattern-set)</span>
+        <span class="footer-text">Design System v2.6 — April 2026 — Wireframes Tab in Studio Mode</span>
       </div>
       <span class="footer-right">LAB Denim × Jumpsuit — Internal Reference</span>
     </div>
@@ -1469,163 +1469,240 @@
 
 
   <div id="tab-wireframes" class="tab-panel">
+    <style>
+      /* Wireframes tab — light "studio" mode for objective structure review.
+         Intentionally inverts the toolkit's dark Mars Expedition register so
+         a reviewer's eye lands on STRUCTURE, not atmosphere. */
+      #tab-wireframes { background: var(--sand); min-height: calc(100vh - 64px); }
+      #tab-wireframes .ds-section { border-bottom: 1px solid var(--rule-light); }
+      #tab-wireframes .section-label { color: var(--text-muted-light); }
+      #tab-wireframes .section-h2 { color: var(--text-light); }
+      #tab-wireframes .footer { background: var(--sand-dark); border-top: 1px solid var(--rule-light); }
+      #tab-wireframes .footer-text,
+      #tab-wireframes .footer-right { color: var(--text-muted-light); }
+      #tab-wireframes .footer-logo { filter: invert(1) brightness(0.18); }
+
+      /* wf-* utility classes used inline below */
+      #tab-wireframes .wf-eyebrow {
+        font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 600;
+        letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted-light);
+      }
+      #tab-wireframes .wf-card {
+        background: #FFFFFF; border: 1px solid var(--rule-light);
+        padding: 20px 24px;
+      }
+      #tab-wireframes .wf-card-soft {
+        background: var(--wtrlss-cotton); border: 1px solid var(--rule-light);
+      }
+      #tab-wireframes .wf-block-title {
+        font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700;
+        letter-spacing: 1px; text-transform: uppercase; color: var(--text-light);
+        margin-bottom: 6px;
+      }
+      #tab-wireframes .wf-body {
+        font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--text-light);
+      }
+      #tab-wireframes .wf-body-muted {
+        font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--text-muted-light);
+      }
+      #tab-wireframes .wf-note {
+        margin-top: 10px; padding: 8px 14px;
+        background: rgba(196,98,58,0.07); border-left: 3px solid var(--clay);
+        font-size: 12px; line-height: 1.55; color: var(--text-light);
+      }
+      #tab-wireframes .wf-question {
+        background: #FFFFFF; border: 1px solid rgba(196,98,58,0.35);
+        border-left: 4px solid var(--clay);
+        padding: 16px 22px;
+      }
+      #tab-wireframes .wf-question-eyebrow {
+        font-family: 'Space Grotesk', sans-serif; font-size: 9px; font-weight: 700;
+        letter-spacing: 2px; text-transform: uppercase; color: var(--clay);
+        margin-bottom: 8px;
+      }
+      #tab-wireframes .wf-question-h {
+        font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700;
+        color: var(--text-light); margin-bottom: 6px; line-height: 1.4;
+      }
+      #tab-wireframes .wf-xlink {
+        font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 500;
+        color: var(--text-light); text-decoration: underline; text-underline-offset: 3px;
+        text-decoration-color: var(--rule-light);
+      }
+      #tab-wireframes .wf-meta-cell {
+        background: #FFFFFF; border: 1px solid var(--rule-light); padding: 16px 20px;
+      }
+      #tab-wireframes .wf-block-row {
+        background: var(--wtrlss-cotton); border: 1px solid var(--rule-light);
+        padding: 18px 22px; display: flex; gap: 18px; align-items: flex-start;
+      }
+      #tab-wireframes .wf-block-row + .wf-block-row { border-top: none; }
+      #tab-wireframes .wf-block-num {
+        font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700;
+        color: var(--text-muted-light); flex-shrink: 0; margin-top: 3px; letter-spacing: 1px;
+      }
+    </style>
 
     <!-- 00 Tab Intro -->
     <div class="ds-section">
-      <span class="section-label" style="color:var(--text-muted);">04 — Page Wireframes</span>
+      <span class="section-label">04 — Page Wireframes</span>
       <h2 class="section-h2">Reactable Page Architecture</h2>
-      <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);max-width:680px;margin-bottom:32px;">Stripped-back structure for the Launch pages. Use these to react to <strong style="color:var(--text-dark);font-weight:500;">what blocks exist and in what order</strong> — not typography, not color, not photography. Visual feel lives in tab 03; the live build lives in <code style="font-family:monospace;color:var(--text-dark);">wtrlss-site</code>.</p>
+      <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted-light);max-width:680px;margin-bottom:32px;">Stripped-back structure for the Launch pages. Use these to react to <strong style="color:var(--text-light);font-weight:500;">what blocks exist and in what order</strong> — not typography, not color, not photography. Visual feel lives in tab 03; the live build lives in <code style="font-family:monospace;color:var(--text-light);background:var(--wtrlss-cotton);padding:1px 6px;">wtrlss-site</code>.</p>
 
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:32px;">
-        <div style="background:var(--dusk);padding:20px 24px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">How to read</div>
-          <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-dark);">Each block is a numbered, named section that will appear top-to-bottom on the live page. Italic notes flag open questions or pending assets.</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;">
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">How to read</div>
+          <div class="wf-body">Each block is a numbered, named section that will appear top-to-bottom on the live page. Notes flag open questions or pending assets.</div>
         </div>
-        <div style="background:var(--dusk);padding:20px 24px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">React to</div>
-          <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-dark);">Block presence (is this block needed?), block order (is the rhythm right?), block content (what's missing, what's extra?).</div>
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">React to</div>
+          <div class="wf-body">Block presence (is this block needed?), block order (is the rhythm right?), block content (what's missing, what's extra?).</div>
         </div>
-        <div style="background:var(--dusk);padding:20px 24px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Ignore</div>
-          <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-dark);">Visual polish, exact wording, color, photography. Those live in tab 03 Visual Language and the site build.</div>
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">Ignore</div>
+          <div class="wf-body">Visual polish, exact wording, color, photography. Those live in tab 03 Visual Language and the site build.</div>
         </div>
       </div>
 
-      <div style="background:var(--dusk);padding:16px 24px;border-left:2px solid rgba(240,235,227,0.2);margin-bottom:24px;">
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Launch pages (May / June)</div>
-        <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-dark);">Homepage · The Technology · For Brands · For Factories · Sustainability · Company (Phase 1 stub at launch). Post-launch pages — Journal, Certified Waterless™ standalone, Campaign LPs — are not wireframed here yet.</div>
-      </div>
-
-      <div style="background:var(--dusk);padding:16px 24px;border-left:2px solid rgba(240,235,227,0.2);">
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Status</div>
-        <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-dark);">Homepage wireframe below sets the pattern. Remaining 5 launch pages will be added once style is approved.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">Launch pages (May / June)</div>
+          <div class="wf-body-muted">Homepage · The Technology · For Brands · For Factories · Sustainability · Company (Phase 1 stub at launch). Post-launch — Journal, Certified Waterless™, Campaign LPs — not wireframed here yet.</div>
+        </div>
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">Status</div>
+          <div class="wf-body-muted">Homepage wireframe below sets the pattern. Remaining 5 launch pages will be added once style is approved.</div>
+        </div>
       </div>
     </div>
 
 
     <!-- 01 Homepage -->
     <div class="ds-section">
-      <span class="section-label" style="color:var(--text-muted);">Page 01 of 6</span>
+      <span class="section-label">Page 01 of 6</span>
       <h2 class="section-h2">Homepage</h2>
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted);margin-bottom:32px;">/ &nbsp;&nbsp;·&nbsp;&nbsp; First touchpoint &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/ &nbsp;&nbsp;·&nbsp;&nbsp; First touchpoint &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
 
       <!-- Meta -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-bottom:32px;">
-        <div style="background:var(--dusk);padding:18px 22px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Audience</div>
-          <div style="font-size:13px;font-weight:300;line-height:1.5;color:var(--text-dark);">All — first touchpoint</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">All — first touchpoint</div>
         </div>
-        <div style="background:var(--dusk);padding:18px 22px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Purpose</div>
-          <div style="font-size:13px;font-weight:300;line-height:1.5;color:var(--text-dark);">Establish the brand, route visitors to the right pathway, capture email</div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Establish the brand, route visitors to the right pathway, capture email</div>
         </div>
-        <div style="background:var(--dusk);padding:18px 22px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Primary CTA</div>
-          <div style="font-size:13px;font-weight:300;line-height:1.5;color:var(--text-dark);">Request a Sample / Explore Pathways</div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Request a Sample / Explore Pathways</div>
         </div>
       </div>
 
       <!-- Blocks header -->
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Content Blocks (top → bottom)</div>
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
 
       <!-- Blocks -->
-      <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:32px;">
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">01</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">Hero</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Full-viewport desert hero. Headline leads with creative liberation, not sustainability.</div>
-            <div style="margin-top:8px;padding-left:14px;border-left:2px solid rgba(240,235,227,0.2);font-size:12px;font-style:italic;color:var(--text-muted);line-height:1.5;">Working line: "Denim is held hostage by a 19th century bottleneck. Not anymore."</div>
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">Full-viewport desert hero. Headline leads with creative liberation, not sustainability.</div>
+            <div class="wf-note">Working line: "Denim is held hostage by a 19th century bottleneck. Not anymore."</div>
           </div>
         </div>
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">02</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">Standard 0.0 / Technology Intro</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Category-defining platform intro. WTRLSS Inside framing. Small secret-sauce callout. Links to Technology page for the deep dive.</div>
-            <div style="margin-top:8px;padding-left:14px;border-left:2px solid rgba(240,235,227,0.2);font-size:12px;font-style:italic;color:var(--text-muted);line-height:1.5;">Per Eric/Hunter on 4/22: industry-accurate language, couple paragraphs max, "want to know more" CTA pattern.</div>
+            <div class="wf-block-title">Standard 0.0 / Technology Intro</div>
+            <div class="wf-body-muted">Category-defining platform intro. WTRLSS Inside framing. Small secret-sauce callout. Links to Technology page for the deep dive.</div>
+            <div class="wf-note">Per Eric/Hunter on 4/22: industry-accurate language, couple paragraphs max, "want to know more" CTA pattern.</div>
           </div>
         </div>
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">03</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">Three Pillars</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Creativity · Speed · Innovation. Each pillar gets a gut-check line from the FINAL voice guide. Not four — three was locked on the 4/22 call.</div>
+            <div class="wf-block-title">Three Pillars</div>
+            <div class="wf-body-muted">Creativity · Speed · Innovation. Each pillar gets a gut-check line from the FINAL voice guide. Not four — three was locked on the 4/22 call.</div>
           </div>
         </div>
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">04</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">Pathway Split</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Brand-led vs. Factory-led routing. Full-viewport split screen. Routes to /for-brands and /for-factories.</div>
-            <div style="margin-top:8px;padding-left:14px;border-left:2px solid rgba(240,235,227,0.2);font-size:12px;font-style:italic;color:var(--text-muted);line-height:1.5;">Sitemap doc routed these to /pathway-a and /pathway-b — the live site uses /for-brands and /for-factories. Confirming routing is the latter.</div>
+            <div class="wf-block-title">Pathway Split</div>
+            <div class="wf-body-muted">Brand-led vs. Factory-led routing. Full-viewport split screen. Routes to /for-brands and /for-factories.</div>
+            <div class="wf-note">Sitemap doc routed these to /pathway-a and /pathway-b — the live site uses /for-brands and /for-factories. Confirming routing is the latter.</div>
           </div>
         </div>
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">05</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">Sustainability as Proof Layer</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Stat bar moment. Positioned as supporting evidence, not the lead.</div>
-            <div style="margin-top:8px;padding-left:14px;border-left:2px solid rgba(240,235,227,0.2);font-size:12px;font-style:italic;color:var(--text-muted);line-height:1.5;">Stat conflict pending Hunter call: 55L vs. 26 gallons (≈98L) per pair. Anchor quote: "Regulatory pressure is not a threat. It's a tailwind."</div>
+            <div class="wf-block-title">Sustainability as Proof Layer</div>
+            <div class="wf-body-muted">Stat bar moment. Positioned as supporting evidence, not the lead.</div>
+            <div class="wf-note">Stat conflict pending Hunter call: 55L vs. 26 gallons (≈98L) per pair. Anchor quote: "Regulatory pressure is not a threat. It's a tailwind."</div>
           </div>
         </div>
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">06</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">WTRLSS Inside Badge</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Certified Waterless badge moment. Bureau Veritas / Stanford / Patent callouts. Cross-link to Sustainability for the detail.</div>
+            <div class="wf-block-title">WTRLSS Inside Badge</div>
+            <div class="wf-body-muted">Certified Waterless badge moment. Bureau Veritas / Stanford / Patent callouts. Cross-link to Sustainability for the detail.</div>
           </div>
         </div>
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">07</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">07</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">Product Detail Strip</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Four denim macro crops — waistband, pocket, care label, label detail. Texture as hero, per Hunter's brand intro deck.</div>
-            <div style="margin-top:8px;padding-left:14px;border-left:2px solid rgba(240,235,227,0.2);font-size:12px;font-style:italic;color:var(--text-muted);line-height:1.5;">4.13 photoshoot delivered (512 frames). Hero candidates: p200 (full model wide-leg), p500 (flat-lay w/ W hang tag). Machine macro NOT yet shot — placeholder until that shoot.</div>
+            <div class="wf-block-title">Product Detail Strip</div>
+            <div class="wf-body-muted">Four denim macro crops — waistband, pocket, care label, label detail. Texture as hero, per Hunter's brand intro deck.</div>
+            <div class="wf-note">4.13 photoshoot delivered (512 frames). Hero candidates: p200 (full model wide-leg), p500 (flat-lay w/ W hang tag). Machine macro NOT yet shot — placeholder until that shoot.</div>
           </div>
         </div>
 
-        <div style="background:var(--dusk);padding:20px 24px;display:flex;gap:20px;align-items:flex-start;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:var(--text-muted);flex-shrink:0;margin-top:3px;letter-spacing:1px;">08</span>
+        <div class="wf-block-row">
+          <span class="wf-block-num">08</span>
           <div style="flex:1;">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:6px;">Email Capture</div>
-            <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Minimal email gate above footer. No eco-lecture. Working line: "No eco-lectures. Just early access."</div>
+            <div class="wf-block-title">Email Capture</div>
+            <div class="wf-body-muted">Minimal email gate above footer. No eco-lecture. Working line: "No eco-lectures. Just early access."</div>
           </div>
         </div>
 
       </div>
 
-      <!-- Net-new considerations -->
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Net-new questions for this page</div>
-      <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:32px;">
-        <div style="background:var(--night);border:1px solid var(--rule-dark);padding:16px 22px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">SPC acquisition messaging — where does it live?</div>
-          <div style="font-size:12px;font-weight:300;line-height:1.6;color:var(--text-muted);">June launch story includes Waterless acquiring SPC. Folded into Hero / Standard 0.0 framing, or its own block?</div>
+      <!-- Net-new questions — promoted treatment -->
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Net-new</div>
+          <div class="wf-question-h">SPC acquisition messaging — where does it live?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">June launch story includes Waterless acquiring SPC. Folded into Hero / Standard 0.0 framing, or its own block?</div>
         </div>
-        <div style="background:var(--night);border:1px solid var(--rule-dark);padding:16px 22px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Triarchy quote slot — where, when?</div>
-          <div style="font-size:12px;font-weight:300;line-height:1.6;color:var(--text-muted);">Hunter floated Triarchy as an early partner quote pre-July (before Levi's reveal). Add a quote block near pillars or post-pathway? Toggleable per launch phase?</div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Net-new</div>
+          <div class="wf-question-h">Triarchy quote slot — where, when?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Hunter floated Triarchy as an early partner quote pre-July (before Levi's reveal). Add a quote block near pillars or post-pathway? Toggleable per launch phase?</div>
         </div>
-        <div style="background:var(--night);border:1px solid var(--rule-dark);padding:16px 22px;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Levi's reveal moment (July 9–13) — homepage shift?</div>
-          <div style="font-size:12px;font-weight:300;line-height:1.6;color:var(--text-muted);">Does the hero shift for the Levi's reveal week, or does the reveal live on a campaign LP and the homepage stays steady?</div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Net-new</div>
+          <div class="wf-question-h">Levi's reveal moment (July 9–13) — homepage shift?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Does the hero shift for the Levi's reveal week, or does the reveal live on a campaign LP and the homepage stays steady?</div>
         </div>
       </div>
 
       <!-- Cross-links -->
-      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-        <span style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-right:8px;">Cross-links to:</span>
-        <span style="background:rgba(240,235,227,0.06);border:1px solid var(--rule-dark);padding:5px 12px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">The Technology</span>
-        <span style="background:rgba(240,235,227,0.06);border:1px solid var(--rule-dark);padding:5px 12px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">For Brands</span>
-        <span style="background:rgba(240,235,227,0.06);border:1px solid var(--rule-dark);padding:5px 12px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">For Factories</span>
-        <span style="background:rgba(240,235,227,0.06);border:1px solid var(--rule-dark);padding:5px 12px;font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);">Sustainability</span>
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#" class="wf-xlink">The Technology</a>
+        <a href="#" class="wf-xlink">For Brands</a>
+        <a href="#" class="wf-xlink">For Factories</a>
+        <a href="#" class="wf-xlink">Sustainability</a>
       </div>
     </div>
 
@@ -1633,7 +1710,7 @@
     <div class="footer">
       <div class="footer-left">
         <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
-        <span class="footer-text">Design System v2.5 — April 2026 — Wireframes Tab Added (Homepage pattern-set)</span>
+        <span class="footer-text">Design System v2.6 — April 2026 — Wireframes Tab in Studio Mode</span>
       </div>
       <span class="footer-right">Waterless — Internal Reference</span>
     </div>
