@@ -18,16 +18,17 @@
       --sand: #F5F0E8;
       --sand-dark: #EAE3D8;
 
-      /* Brand Mode — agency-locked WTRLSS palette */
-      --wtrlss-navy: #283c6e;
-      --wtrlss-orange: #f28228;
-      --wtrlss-red: #b42626;
-      --wtrlss-cotton: #F2EEE8;
+      /* Brand Mode — agency-locked secondary "Thread" palette
+         (revised 2026-04-27 per Hunter; replaces earlier Stitch Orange / Selvedge Red set) */
+      --wtrlss-navy: #32328A;       /* Navy Thread */
+      --wtrlss-tobacco: #DE6C2F;    /* Tobacco Thread — close cousin to Mars Clay */
+      --wtrlss-gold: #FFC240;       /* Gold Thread */
+      --wtrlss-khaki: #9FA864;      /* Khaki Thread */
+      --wtrlss-cotton: #F2EEE8;     /* Cotton White — neutral */
       --white: #FFFFFF;
 
-      /* Narrative Mode accent — Mars Clay sits between Stitch Orange and Selvedge Red.
-         Less loud than pure orange, lets denim + sage breathe. Brand Mode uses
-         --wtrlss-orange directly; Narrative Mode uses --clay. */
+      /* Narrative Mode accent — Mars Clay anchors big innovation moments;
+         the four Threads support secondary surfaces and partner adjacencies. */
       --clay: #C4623A;
       --clay-light: #D87A4C;
       --clay-dark: #A14E2A;
@@ -421,7 +422,7 @@
   <nav class="nav">
     <img class="nav-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
     <div class="nav-right">
-      <span class="nav-label">LAB Denim × Jumpsuit — Internal</span>
+      <span class="nav-label">Waterless × Jumpsuit — Internal</span>
       <div class="nav-dot"></div>
       <span class="nav-date">April 2026</span>
     </div>
@@ -434,22 +435,250 @@
       <div class="eyebrow-line"></div>
       <span class="eyebrow-text">WTRLSS Brand Toolkit</span>
     </div>
-    <h1 class="hero-h1">Architecture<br><span class="accent">+</span> Visual<br>Language</h1>
-    <p class="hero-sub">Two reference documents for the WTRLSS website build — site architecture and the visual system. Two modes (Brand + Narrative), one language. Internal use only.</p>
+    <h1 class="hero-h1">Brand Foundation<br><span class="accent">+</span> Architecture<br><span class="accent">+</span> Visual Language</h1>
+    <p class="hero-sub">Three reference documents for the WTRLSS website build — brand foundation (vision, mission, pillars, voice), site architecture, and the visual system. Two modes (Brand + Narrative), one language. Internal use only.</p>
   </div>
 
   <div class="rule"></div>
 
   <!-- TABS -->
   <div class="tab-bar">
-    <button class="tab-btn active" onclick="switchTab('sitemap', this)">01 — Site Architecture</button>
-    <button class="tab-btn" onclick="switchTab('design', this)">02 — Visual Language</button>
+    <button class="tab-btn active" onclick="switchTab('foundation', this)">01 — Brand Foundation</button>
+    <button class="tab-btn" onclick="switchTab('sitemap', this)">02 — Site Architecture</button>
+    <button class="tab-btn" onclick="switchTab('design', this)">03 — Visual Language</button>
+    <button class="tab-btn" onclick="switchTab('wireframes', this)">04 — Page Wireframes</button>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- TAB 1: SITEMAP -->
+  <!-- TAB 1: BRAND FOUNDATION -->
   <!-- ═══════════════════════════════════════════════════════ -->
-  <div id="tab-sitemap" class="tab-panel active">
+  <div id="tab-foundation" class="tab-panel active">
+
+    <!-- 01 Vision -->
+    <div class="ds-section">
+      <span class="section-label">01 — Brand Vision</span>
+      <h2 class="section-h2">The future of denim is dry.</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+        <div>
+          <p style="font-size:18px;font-weight:300;line-height:1.7;color:var(--text-dark);margin-bottom:20px;">We are creating the post-water era of fashion — enabling "impossible" design and redefining how clothes are made.</p>
+          <p style="font-size:14px;font-weight:300;line-height:1.8;color:var(--text-muted);">The vision is not a greener version of what exists. It is a cleaner path to what was previously unmakeable. Dry is the default, not the premium.</p>
+        </div>
+        <div style="background:var(--dusk);padding:32px;border-left:3px solid var(--clay);display:flex;align-items:center;">
+          <div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:12px;">Wordmark</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,2.5vw,32px);font-weight:700;line-height:1.0;letter-spacing:-0.5px;text-transform:uppercase;color:var(--text-dark);">The future of denim<br>is dry.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Mission -->
+    <div class="ds-section">
+      <span class="section-label">02 — Brand Mission</span>
+      <h2 class="section-h2">Impossible is the new normal.</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:32px;">
+        <div>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">Denim is ready for a transformation. For too long, design cycles have been slow and restrictive, leaving brands hampered by scale and unable to pivot to changing market needs or respond when inspiration strikes.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">Textile factories are tethered to outdated processes, struggling to keep pace with new environmental standards.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);">Put simply, we're trying to use a 19th century process in a 21st century world. It's time for a better way to create.</p>
+        </div>
+        <div>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">WTRLSS is a unique, bio-based digital dyeing and finishing technology. We didn't just build a cleaner machine — we built a platform for your most creative ideas, removing the barriers of denim production along the way.</p>
+        </div>
+      </div>
+      <div style="background:var(--dusk);padding:40px 48px;border-left:3px solid var(--clay);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;">Mission pullquote</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,2.8vw,36px);font-weight:700;line-height:1.1;letter-spacing:-0.5px;text-transform:uppercase;color:var(--text-dark);margin:0;">WTRLSS isn't a denim innovation.<br>It's a denim <span style="color:var(--clay);">revolution.</span></p>
+      </div>
+    </div>
+
+    <!-- 03 Promise -->
+    <div class="ds-section">
+      <span class="section-label">03 — Brand Promise</span>
+      <h2 class="section-h2">"Impossible" is no more.</h2>
+      <p style="font-size:14px;font-weight:300;line-height:1.8;color:var(--text-muted);max-width:720px;margin-bottom:32px;">WTRLSS eliminates the technical barriers that stood between you and creative ideas, enabling you to design at the speed of thought and produce at the scale of your ambition. Our promise, rewritten for each audience:</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+        <div style="background:var(--dusk);padding:32px;border-top:3px solid var(--clay);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;">Brands</div>
+          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:12px;">If you can dream it, we can dye it.</p>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);">Hyper-customized colorways. Design cycles that collapse. Creative briefs that stop starting with "what's possible."</p>
+        </div>
+        <div style="background:var(--dusk);padding:32px;border-top:3px solid var(--clay);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;">Factories</div>
+          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:12px;">This isn't an upgrade. It's an evolution.</p>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);">WTRLSS empowers your factory to move 45% faster, slashing lead times and eliminating the dependence on massive water usage that has held you back. Speed, precision, and sustainability — not just to survive the 21st century, but to lead it.</p>
+        </div>
+        <div style="background:var(--dusk);padding:32px;border-top:3px solid var(--clay);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;">Customers</div>
+          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:12px;">Those arrows on the tag of your new jeans? They aren't just a logo.</p>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);">They're a reminder that WTRLSS is connecting you to the future of fashion — where you don't have to choose between a good product and a healthy world.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Pillars -->
+    <div class="ds-section">
+      <span class="section-label">04 — Brand Pillars</span>
+      <h2 class="section-h2">The core of what we are.</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+        <div style="background:var(--dusk);padding:40px 32px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:700;letter-spacing:-1px;line-height:1;color:var(--clay);margin-bottom:20px;">01</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.5px;text-transform:uppercase;color:var(--text-dark);margin-bottom:8px;">Creativity</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);margin-bottom:20px;">Making what no one else can</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);">If you can dream it, we can dye it. Our pioneering technology transforms denim into a high-fidelity canvas. From intricate patterns to hand-illustrated colorways, we enable brands to create designs never possible before, and to do so at scale.</p>
+        </div>
+        <div style="background:var(--dusk);padding:40px 32px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:700;letter-spacing:-1px;line-height:1;color:var(--clay);margin-bottom:20px;">02</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.5px;text-transform:uppercase;color:var(--text-dark);margin-bottom:8px;">Speed</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);margin-bottom:20px;">Imagination made instant</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);">Sample in days, not weeks. Design-to-production in 6 months, not 18. We bridge the gap between runway imagination and wardrobe reality, replacing waste and lag with a high-speed architecture that redefines how clothes are made.</p>
+        </div>
+        <div style="background:var(--dusk);padding:40px 32px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:700;letter-spacing:-1px;line-height:1;color:var(--clay);margin-bottom:20px;">03</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.5px;text-transform:uppercase;color:var(--text-dark);margin-bottom:8px;">Innovation</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);margin-bottom:20px;">Regulations made irrelevant</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);">Environmental sustainability is the new table stakes. By reducing energy consumption by 50% and water usage by 99.97%, WTRLSS allows brands and factories to decouple growth from pollution. Sustainable isn't a buzzword — it's a foundational technical advantage.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Primary Audience -->
+    <div class="ds-section">
+      <span class="section-label">05 — Primary Audience</span>
+      <h2 class="section-h2">Brand Innovation Director.</h2>
+      <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:48px;">
+        <div>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">The era of design compromise is officially over. No longer will you be held back by what dye baths can handle or lead times will allow.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">"Impossible" is now the standard setting.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">WTRLSS gives you a complete liberation of your creative workflow. We enable you to move from digital render to shelf-ready masterpiece 3 times faster, with the absolute certainty that the soul of your design — the hand-feel, natural aging, and depth of color — will be preserved perfectly from sample to mass production.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-dark);font-weight:500;">We give you a category-defining canvas. What you make is up to you.</p>
+        </div>
+        <div style="background:var(--dusk);padding:40px 32px;border-left:3px solid var(--clay);display:flex;align-items:center;">
+          <div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;">Audience tagline</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,2.6vw,32px);font-weight:700;line-height:1.05;letter-spacing:-0.5px;text-transform:uppercase;color:var(--text-dark);">A cleaner path<br>from concept<br>to catwalk.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 Key Differentiators -->
+    <div class="ds-section">
+      <span class="section-label">06 — Key Differentiators</span>
+      <h2 class="section-h2">How to talk about what makes us unique.</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+        <div style="background:var(--dusk);padding:28px 32px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Design without dead ends</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">For too long, the best ideas have been killed by what a swatch house can't replicate or a chemical bath might ruin. WTRLSS allows brands to confidently create intricate digital textures, vintage effects on denim, and mixed-fabric concepts at scale.</p>
+        </div>
+        <div style="background:var(--dusk);padding:28px 32px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Impossible is scalable</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">Innovation is useless if it is trapped in a boutique lab. WTRLSS was built for the industrial frontline, ensuring that the thousandth pair is a perfect clone of the first, eliminating the "switch-to-bath" lottery that haunts traditional production — while also virtually bespoked, on-demand production.</p>
+        </div>
+        <div style="background:var(--dusk);padding:28px 32px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Radical profitability</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">WTRLSS isn't just a tech upgrade. It's a financial overhaul. By slashing energy use by 50%, eliminating the need for massive wastewater treatment plants, and cutting production times in half, we're carving out massive margins where there used to be waste.</p>
+        </div>
+        <div style="background:var(--dusk);padding:28px 32px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Months, not years</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">In an industry where trends die while you're waiting for samples, WTRLSS eliminates the multi-stage bottleneck entirely. This means product samples in days instead of weeks, full production cuts in 6 months instead of 18, and overall production as much as 3x faster than traditional methods.</p>
+        </div>
+        <div style="background:var(--dusk);padding:28px 32px;grid-column:span 2;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Compliance as an asset</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">WTRLSS enables brands to turn outstanding items from sustainability from a constraint into a competitive advantage. By eliminating petrochemical dyes and cutting 99.97% of process water, compliance is given rather than a burden. We help brands meet and exceed EU, California, and other state regulations without slowing their sustainability promises.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Reasons to Believe -->
+    <div class="ds-section">
+      <span class="section-label">07 — Reasons to Believe</span>
+      <h2 class="section-h2">Quick facts to transform an industry.</h2>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:24px;">
+        <div style="background:var(--dusk);padding:36px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,3.2vw,46px);font-weight:700;letter-spacing:-2px;line-height:1;color:var(--text-dark);margin-bottom:12px;">99.97%</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Less water used</div>
+        </div>
+        <div style="background:var(--dusk);padding:36px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,3.2vw,46px);font-weight:700;letter-spacing:-2px;line-height:1;color:var(--text-dark);margin-bottom:12px;">97%</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Less emissions</div>
+        </div>
+        <div style="background:var(--dusk);padding:36px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,3.2vw,46px);font-weight:700;letter-spacing:-2px;line-height:1;color:var(--text-dark);margin-bottom:12px;">30–45%</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Increase in processing capacity</div>
+        </div>
+        <div style="background:var(--dusk);padding:36px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,3.2vw,46px);font-weight:700;letter-spacing:-2px;line-height:1;color:var(--text-dark);margin-bottom:12px;">3×</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Faster to market</div>
+        </div>
+        <div style="background:var(--dusk);padding:36px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,3.2vw,46px);font-weight:700;letter-spacing:-2px;line-height:1;color:var(--text-dark);margin-bottom:12px;">99%</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);">Bio-based chemistry</div>
+        </div>
+      </div>
+      <div style="background:var(--dusk);padding:20px 28px;border-left:3px solid rgba(154,143,132,0.4);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">Stat correction</div>
+        <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">Chemistry is <strong style="color:var(--text-dark);font-weight:600;">99% bio-based, not 100%</strong> — the remaining 1% is the ink. Correct across all site copy, mockups, and collateral. This is the finalized framing from Eric's brand positioning doc.</p>
+      </div>
+    </div>
+
+    <!-- 08 Standard 0.0 / WTRLSS Inside -->
+    <div class="ds-section">
+      <span class="section-label">08 — Standard 0.0 / WTRLSS Inside</span>
+      <h2 class="section-h2">The ingredient that makes the future possible.</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:32px;">
+        <div>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">Every era has a defining technology that renders everything before it obsolete. We are the "Standard 0.0" for the textile industry — a category-defining technology that offers the first true alternative to a century of industrial waste.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">By offering 99.97% water savings and total creative liberation, we're providing a proprietary technical advantage that the world's best designers can't live without.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-dark);font-weight:500;">We aren't just an improvement to the process; we are the ingredient that makes the future of fashion possible.</p>
+        </div>
+        <div style="background:var(--dusk);padding:32px;border-left:3px solid var(--clay);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;">The secret sauce</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:12px;">We've replaced the costly, unpredictable chemistry of the 19th century with the digital precision of the 21st. WTRLSS isn't just a better machine — it's a total reimagining of how clean denim, wash, and texture meet fiber.</p>
+          <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:12px;">WTRLSS is built on a proprietary breakthrough: <strong style="color:var(--text-dark);font-weight:600;">MultiActiv dye chemistry.</strong> Unlike traditional dyes that sit on the fiber, MultiActiv dyes chemically bond directly into it — creating deeper, more stable colors that meet every industry test for durability and retention.</p>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(240,235,227,0.1);">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:8px;">Kicker</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;letter-spacing:-0.5px;text-transform:uppercase;color:var(--text-dark);line-height:1;">Design on demand.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 Elevator Pitch -->
+    <div class="ds-section">
+      <span class="section-label">09 — Elevator Pitch</span>
+      <h2 class="section-h2">Made fast right.</h2>
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:48px;">
+        <div>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">Denim is the world's most iconic fabric, but it is held hostage by a 19th century manufacturing bottleneck.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">WTRLSS is completely reinventing denim production by pioneering the world's first bio-based digital dyeing platform. It collapses the traditional production cycle and moves 3 times faster than anything on the market.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:16px;">This digital-first workflow allows brands to create complex gradients and hyper-customized designs with surgical precision and at global scale.</p>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-dark);font-weight:500;">Welcome to WTRLSS — the future of denim.</p>
+        </div>
+        <div style="background:var(--dusk);padding:48px 40px;border-left:3px solid var(--clay);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:20px;">Signature tagline</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-2px;line-height:0.95;text-transform:uppercase;color:var(--text-dark);">Made<br>fast<br>right.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
+        <span class="footer-text">Brand Foundation v1.0 — April 2026 — From WTRLSS Brand Positioning FINAL</span>
+      </div>
+      <span class="footer-right">LAB Denim × Jumpsuit — Confidential</span>
+    </div>
+
+  </div><!-- /tab-foundation -->
+
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TAB 2: SITEMAP -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="tab-sitemap" class="tab-panel">
 
     <div class="section">
       <span class="section-label">Site Architecture — Sitemap v2</span>
@@ -794,7 +1023,7 @@
 
 
   <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- TAB 2: DESIGN SYSTEM -->
+  <!-- TAB 3: DESIGN SYSTEM -->
   <!-- ═══════════════════════════════════════════════════════ -->
   <div id="tab-design" class="tab-panel">
 
@@ -838,17 +1067,17 @@
         <!-- Brand Mode -->
         <div style="background:var(--wtrlss-cotton);color:var(--text-light);padding:40px;border:1px solid var(--rule-light);">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-            <div style="width:10px;height:10px;background:var(--wtrlss-orange);"></div>
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted-light);">Brand Mode — Stitch Orange</div>
+            <div style="width:10px;height:10px;background:var(--wtrlss-tobacco);"></div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted-light);">Brand Mode — Thread Palette</div>
           </div>
           <h3 style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;line-height:1.05;letter-spacing:-1px;text-transform:uppercase;color:var(--text-light);margin-bottom:16px;">Where WTRLSS stands next to other brands</h3>
-          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted-light);margin-bottom:24px;">Cotton White on pure dark. Agency secondary palette. Editorial, reductive, material-first. Used for pages where WTRLSS is being compared, evaluated, or certified.</p>
+          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted-light);margin-bottom:24px;">Cotton White on pure dark. Agency-approved Thread palette. Editorial, reductive, material-first. Used for pages where WTRLSS is being compared, evaluated, or certified.</p>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted-light);margin-bottom:10px;">Use for</div>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
-            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">For Brands</li>
-            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">For Factories</li>
-            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">Sustainability / Certifications</li>
-            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-orange);">Hang tags, garment labels, social templates</li>
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-tobacco);">For Brands</li>
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-tobacco);">For Factories</li>
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-tobacco);">Sustainability / Certifications</li>
+            <li style="font-size:13px;color:var(--text-light);padding-left:12px;border-left:2px solid var(--wtrlss-tobacco);">Hang tags, garment labels, social templates</li>
           </ul>
         </div>
         <!-- Narrative Mode -->
@@ -858,7 +1087,7 @@
             <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Narrative Mode — Mars Clay</div>
           </div>
           <h3 style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;line-height:1.05;letter-spacing:-1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:16px;">Where WTRLSS tells its own story</h3>
-          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:24px;">Warm near-black surfaces. Desert night + ember + denim macro imagery. Mars Clay accent — quieter than Stitch Orange, lets denim and sage breathe. Used for pages where WTRLSS sets its own terms.</p>
+          <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:24px;">Warm near-black surfaces. Desert night + ember + denim macro imagery. Mars Clay accent — same warm-clay family as Tobacco Thread, but reserved for big innovation hits. Used for pages where WTRLSS sets its own terms.</p>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Use for</div>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
             <li style="font-size:13px;color:var(--text-dark);padding-left:12px;border-left:2px solid var(--clay);">Homepage hero</li>
@@ -871,7 +1100,7 @@
 
       <div style="background:var(--dusk);padding:24px 28px;border-left:3px solid var(--clay);">
         <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:12px;">The bridge between modes</div>
-        <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">Both modes share the same typography, the same W mark, and the same signature pattern (The Negative Viewer — fixed mark, variable content). What changes is the accent: Stitch Orange on product surfaces where WTRLSS sits next to other brands; Mars Clay on narrative surfaces where WTRLSS sets its own terms. Same system, two registers.</p>
+        <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);margin:0;">Both modes share the same typography, the same W mark, and the same signature pattern (The Negative Viewer — fixed mark, variable content). What changes is the accent: the agency Thread palette (Tobacco / Gold / Khaki / Navy) on product surfaces where WTRLSS sits next to other brands; Mars Clay on narrative surfaces where WTRLSS sets its own terms. Same system, two registers.</p>
       </div>
     </div>
 
@@ -914,30 +1143,39 @@
     <div class="ds-section">
       <span class="section-label">04 — Color Palette</span>
       <h2 class="section-h2">The WTRLSS Palette</h2>
-      <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);max-width:640px;margin-bottom:40px;">Two modes, one system. Brand Mode is the agency-locked palette sourced from denim itself — used wherever WTRLSS stands next to other brands. Narrative Mode runs on Mars Clay — a quieter, rust-warm accent that sits between the agency's Stitch Orange and Selvedge Red, letting denim and sage breathe alongside it.</p>
+      <p style="font-size:14px;font-weight:300;line-height:1.7;color:var(--text-muted);max-width:640px;margin-bottom:40px;">Two modes, one system. Brand Mode runs on the agency-approved <strong style="color:var(--text-dark);font-weight:500;">Thread palette</strong> — four denim-craft tones plus Cotton White — used wherever WTRLSS stands next to other brands. Narrative Mode runs on Mars Clay — a punchier rust-warm accent reserved for big innovation moments. Mars Clay and Tobacco Thread are intentional close cousins: same warm-clay family, different jobs.</p>
 
-      <!-- Brand Mode — Agency palette -->
+      <!-- Brand Mode — Agency Thread palette -->
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-        <div style="width:10px;height:10px;background:var(--wtrlss-orange);"></div>
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Brand Mode — Agency palette, sourced from denim</div>
+        <div style="width:10px;height:10px;background:var(--wtrlss-tobacco);"></div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);">Brand Mode — Thread palette (agency-approved 2026-04-27)</div>
       </div>
-      <div class="palette-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:40px;">
+      <div class="palette-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:24px;">
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#283c6e;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#283c6e</code><button class="copy-btn" onclick="copyHex(this,'#283c6e')">Copy</button></div><div class="swatch-name">WTRLSS Navy</div><div class="swatch-role">Indigo reference — denim as material</div><div class="swatch-usage">Texture, accents, secondary surfaces</div></div>
+          <div class="swatch-color" style="background:#DE6C2F;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#DE6C2F</code><button class="copy-btn" onclick="copyHex(this,'#DE6C2F')">Copy</button></div><div class="swatch-name">WTRLSS Tobacco Thread</div><div class="swatch-role">Warm clay — close cousin to Mars Clay</div><div class="swatch-usage">Secondary CTAs, denim adjacencies, partner moments</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#f28228;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#f28228</code><button class="copy-btn" onclick="copyHex(this,'#f28228')">Copy</button></div><div class="swatch-name">WTRLSS Stitch Orange</div><div class="swatch-role">Primary accent — selvedge stitch, Mars rust</div><div class="swatch-usage">CTAs, highlights, section labels, stat bars</div></div>
+          <div class="swatch-color" style="background:#FFC240;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#FFC240</code><button class="copy-btn" onclick="copyHex(this,'#FFC240')">Copy</button></div><div class="swatch-name">WTRLSS Gold Thread</div><div class="swatch-role">High-energy accent — gold stitch</div><div class="swatch-usage">Highlights, callouts, partner lockups</div></div>
         </div>
         <div class="swatch-block">
-          <div class="swatch-color" style="background:#b42626;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#b42626</code><button class="copy-btn" onclick="copyHex(this,'#b42626')">Copy</button></div><div class="swatch-name">WTRLSS Selvedge Red</div><div class="swatch-role">Secondary accent — selvedge stripe</div><div class="swatch-usage">Rare emphasis, editorial moments</div></div>
+          <div class="swatch-color" style="background:#9FA864;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#9FA864</code><button class="copy-btn" onclick="copyHex(this,'#9FA864')">Copy</button></div><div class="swatch-name">WTRLSS Khaki Thread</div><div class="swatch-role">Earthy mid-tone — natural fiber</div><div class="swatch-usage">Supporting surfaces, sustainability moments</div></div>
+        </div>
+        <div class="swatch-block">
+          <div class="swatch-color" style="background:#32328A;"></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#32328A</code><button class="copy-btn" onclick="copyHex(this,'#32328A')">Copy</button></div><div class="swatch-name">WTRLSS Navy Thread</div><div class="swatch-role">Indigo reference — denim as material</div><div class="swatch-usage">Body, headers, primary surfaces</div></div>
         </div>
         <div class="swatch-block">
           <div class="swatch-color" style="background:#F2EEE8;"></div>
           <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#F2EEE8</code><button class="copy-btn" onclick="copyHex(this,'#F2EEE8')">Copy</button></div><div class="swatch-name">WTRLSS Cotton White</div><div class="swatch-role">Warm off-white — cotton reference</div><div class="swatch-usage">Light surfaces, hang tags, modals</div></div>
         </div>
+      </div>
+
+      <div style="background:var(--dusk);padding:16px 24px;border-left:3px solid var(--wtrlss-tobacco);margin-bottom:40px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--wtrlss-tobacco);margin-bottom:8px;">Palette revision note</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.6;color:var(--text-muted);">Earlier Brand Guide WIP showed Stitch Orange <code style="font-family:monospace;color:var(--text-dark);">#FF9230</code>, Selvedge Red <code style="font-family:monospace;color:var(--text-dark);">#C80000</code>, and a deeper Navy <code style="font-family:monospace;color:var(--text-dark);">#282978</code>. The agency revised to the warmer, denim-thread system above (per Hunter, 2026-04-27) — Selvedge Red is dropped. Mars Clay (Narrative Mode) stays per Hunter: <em>"I still like your narrative colors on the sitemap so let's not lose those just yet."</em></div>
       </div>
 
       <!-- Narrative Mode — Mars expedition surfaces -->
@@ -948,7 +1186,7 @@
       <div class="palette-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:40px;">
         <div class="swatch-block">
           <div class="swatch-color" style="background:#C4623A;"></div>
-          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#C4623A</code><button class="copy-btn" onclick="copyHex(this,'#C4623A')">Copy</button></div><div class="swatch-name">Mars Clay</div><div class="swatch-role">Narrative accent — sits between Stitch Orange and Selvedge Red</div><div class="swatch-usage">CTAs, labels, rules in Narrative Mode</div></div>
+          <div class="swatch-info"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><code class="swatch-hex">#C4623A</code><button class="copy-btn" onclick="copyHex(this,'#C4623A')">Copy</button></div><div class="swatch-name">Mars Clay</div><div class="swatch-role">Narrative accent — same warm-clay family as Tobacco Thread, reserved for big innovation hits</div><div class="swatch-usage">Hero CTAs, narrative labels, marquee rules</div></div>
         </div>
         <div class="swatch-block">
           <div class="swatch-color" style="background:#141210;border:1px solid rgba(240,235,227,0.1);"></div>
@@ -1026,7 +1264,7 @@
           </div>
         </div>
         <div class="texture-card">
-          <div class="texture-preview" style="background:linear-gradient(135deg,#f28228 0%,#b42626 100%);display:flex;align-items:center;justify-content:center;">
+          <div class="texture-preview" style="background:linear-gradient(135deg,#FFC240 0%,#DE6C2F 100%);display:flex;align-items:center;justify-content:center;">
             <div style="text-align:center;">
               <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700;color:white;line-height:1;">99.97%</div>
               <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.7);">Less Water</div>
@@ -1034,7 +1272,7 @@
           </div>
           <div class="texture-info">
             <div class="texture-name">Stat Bar Gradient</div>
-            <div class="texture-desc">Full-width gradient strip for key statistics. Used once per page. Stitch Orange → Selvedge Red in Brand Mode (shown); Mars Clay → Clay Dark in Narrative Mode. The most visually dominant non-hero element.</div>
+            <div class="texture-desc">Full-width gradient strip for key statistics. Used once per page. Gold Thread → Tobacco Thread in Brand Mode (shown); Mars Clay → Clay Dark in Narrative Mode. The most visually dominant non-hero element.</div>
           </div>
         </div>
 
@@ -1070,7 +1308,7 @@
           <div style="background:var(--dusk);padding:16px 20px;">
             <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:6px;">0:00 — Origin</div>
             <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">Ember W</div>
-            <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Mars dust, forge, impossible beginning. Stitch Orange embers filling the W.</div>
+            <div style="font-size:11px;color:var(--text-muted);line-height:1.5;">Mars dust, forge, impossible beginning. Tobacco-thread embers filling the W.</div>
           </div>
         </div>
         <div>
@@ -1134,10 +1372,40 @@
       </div>
     </div>
 
-    <!-- 07 Voice & Language -->
+    <!-- 09 Voice & Language -->
     <div class="ds-section">
       <span class="section-label">09 — Voice &amp; Language</span>
-      <h2 class="section-h2">Brand Copy Principles</h2>
+      <h2 class="section-h2">Voice, Tone & Language</h2>
+
+      <!-- Voice Pillars (from FINAL) -->
+      <div style="margin-bottom:56px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:20px;">Voice Pillars — creating the voice for an industry to follow</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+          <div style="background:var(--dusk);padding:32px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.2px;text-transform:uppercase;color:var(--text-dark);margin-bottom:12px;">Invention with a hint of magic</div>
+            <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:10px;">This isn't a better mousetrap. We're pioneering something entirely new. As a result, brands can do things that would have been impossible before. People should be amazed at what's happening, then excited when they realize we can help make their lives easier, too.</p>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);">Gut check — Does this line feel "techno-y"?</div>
+          </div>
+          <div style="background:var(--dusk);padding:32px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.2px;text-transform:uppercase;color:var(--text-dark);margin-bottom:12px;">Relentlessly optimistic</div>
+            <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:10px;">We see what's possible and we're always trying to carve a better picture for others. We come with solutions and options, not criticism. We meet people and teams where they are and give them tools to take the next step.</p>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);">Gut check — Does this line make people want to build something better?</div>
+          </div>
+          <div style="background:var(--dusk);padding:32px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.2px;text-transform:uppercase;color:var(--text-dark);margin-bottom:12px;">Smart rebel with a smirk</div>
+            <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:10px;">We're built the science to topple an industry, but you wouldn't know it. We're sharp, probing, and disarmingly human — we want to hear about your next designs, not lecture you about our patents.</p>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);">Gut check — Does this post sound like a friendly conversation over drinks or a corporate PR announcement?</div>
+          </div>
+          <div style="background:var(--dusk);padding:32px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.2px;text-transform:uppercase;color:var(--text-dark);margin-bottom:12px;">Champion the art</div>
+            <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:10px;">We work with partners all over the world to create cleaner, better textiles, but that isn't our end goal. We're building a canvas for our brand partners to create on.</p>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);">Gut check — Does this post make us the hero, or our partners?</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy Principles -->
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:20px;">Copy Principles — approved phrases and what to avoid</div>
       <div class="voice-grid">
         <div>
           <div class="voice-label" style="color:var(--sage-light);">Lead with these</div>
@@ -1145,9 +1413,14 @@
           <div class="voice-item"><div class="voice-phrase">"Standard 0.0"</div><div class="voice-context">Technology positioning — the category-defining platform</div></div>
           <div class="voice-item"><div class="voice-phrase">"Guilt-free expression"</div><div class="voice-context">Community pillar — consumer-facing, desire-first</div></div>
           <div class="voice-item"><div class="voice-phrase">"It's not a threat. It's a tailwind."</div><div class="voice-context">Sustainability framing — regulatory pressure reframed</div></div>
-          <div class="voice-item"><div class="voice-phrase">"WTRLSS Inside"</div><div class="voice-context">Ingredient brand — the Gore-Tex of denim</div></div>
+          <div class="voice-item"><div class="voice-phrase">"WTRLSS Inside" / "Standard 0.0"</div><div class="voice-context">Ingredient brand — the Gore-Tex of denim, category-defining positioning. See Foundation §08.</div></div>
           <div class="voice-item"><div class="voice-phrase">"55L vs. 1 tablespoon"</div><div class="voice-context">Water stat — use this, not 3,781L (that includes cotton growing)</div></div>
-          <div class="voice-item"><div class="voice-phrase">"MultiActiv Dyes"</div><div class="voice-context">Chemistry product name — the bio-based dye class (confirm public-facing)</div></div>
+          <div class="voice-item"><div class="voice-phrase">"From 26 gallons of water per pair to 1 tablespoon"</div><div class="voice-context">Brand Guide WIP social template framing. <strong style="color:var(--clay);">CONFLICT FLAG:</strong> 26 gal ≈ 98L, doesn't match existing 55L figure above. Needs Eric reconciliation before public use.</div></div>
+          <div class="voice-item"><div class="voice-phrase">"MultiActiv Dyes" / "Design on demand"</div><div class="voice-context">Chemistry product name + positioning kicker — public-facing per FINAL doc</div></div>
+          <div class="voice-item"><div class="voice-phrase">"Impossible is the new normal."</div><div class="voice-context">Mission anchor — the register for all brand-voice writing. See Foundation §02.</div></div>
+          <div class="voice-item"><div class="voice-phrase">"Made fast right."</div><div class="voice-context">Signature tagline — elevator pitch closer, footer, hang-tag candidate</div></div>
+          <div class="voice-item"><div class="voice-phrase">"Water is the proof. Not the premise."</div><div class="voice-context">Brand Intro Deck — reframes waterless as validation of the innovation, not the pitch itself</div></div>
+          <div class="voice-item"><div class="voice-phrase">"Production at the speed of culture."</div><div class="voice-context">Brand Intro Deck — Speed pillar alternative to "Imagination made instant"</div></div>
         </div>
         <div>
           <div class="voice-label" style="color:var(--clay);">Avoid these</div>
@@ -1155,8 +1428,31 @@
           <div class="voice-item" style="opacity:0.85;"><div class="voice-phrase strikethrough">"Sustainable fashion"</div><div class="voice-context">Positions WTRLSS in the same category as every greenwashing brand. It's a technology company.</div></div>
           <div class="voice-item" style="opacity:0.85;"><div class="voice-phrase strikethrough">"3,781 liters of water"</div><div class="voice-context">Includes cotton growing — WTRLSS doesn't change that. Use 55L vs. 1 tablespoon.</div></div>
           <div class="voice-item" style="opacity:0.85;"><div class="voice-phrase strikethrough">Water imagery in visuals</div><div class="voice-context">Contradicts the waterless story. No oceans, rivers, or water droplets — ever.</div></div>
-          <div class="voice-item" style="opacity:0.85;"><div class="voice-phrase strikethrough">"Revolutionary" / "Game-changing"</div><div class="voice-context">Overused. Let the stats do the work. 99.97% is more powerful than any adjective.</div></div>
+          <div class="voice-item" style="opacity:0.85;"><div class="voice-phrase strikethrough">"Revolutionary" / "Game-changing" (adjective)</div><div class="voice-context">Overused as an adjective modifier. Let the stats do the work. Note: "denim revolution" as a mission noun (see Foundation §02) is different — it's a singular, strategic anchor, not a generic claim.</div></div>
           <div class="voice-item" style="opacity:0.85;"><div class="voice-phrase strikethrough">Jargon without context</div><div class="voice-context">"Bio-based chemistry" needs to be followed by what that means in plain language.</div></div>
+          <div class="voice-item" style="opacity:0.85;"><div class="voice-phrase strikethrough">"100% bio-based"</div><div class="voice-context">Per FINAL: chemistry is 99% bio-based — the 1% is the ink. Site and mockups need a pass to correct.</div></div>
+        </div>
+      </div>
+
+      <!-- What We Aren't (Voice) -->
+      <div style="margin-top:56px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin-bottom:20px;">What We Aren't (Voice) — creating a consistent personality</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+          <div style="background:var(--dusk);padding:28px 32px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Politically polarizing</div>
+            <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:10px;">Our audience sits on all sides of the political spectrum, no matter which spectrum we're talking about. We have way more important things to do than try to score partisan points.</p>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);">Gut check — Does this line overtly lean toward one side of the aisle?</div>
+          </div>
+          <div style="background:var(--dusk);padding:28px 32px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Eco-obsessed</div>
+            <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:10px;">We're on the front lines of making the world a better, cleaner place, but we also know that the environment isn't the only thing on our audience's mind.</p>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);">Gut check — Are our posts showing variety, or do they all trend to an eco-focus?</div>
+          </div>
+          <div style="background:var(--dusk);padding:28px 32px;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dark);margin-bottom:10px;">Meme funny</div>
+            <p style="font-size:13px;font-weight:300;line-height:1.7;color:var(--text-muted);margin-bottom:10px;">We know that humor is a tool, but it isn't the only one in our toolbox. We don't need to chase trends or force the joke just to be relevant.</p>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--clay);">Gut check — Would this line work as well in a boardroom as it would a social post?</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1164,12 +1460,810 @@
     <div class="footer">
       <div class="footer-left">
         <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
-        <span class="footer-text">Design System v2.1 — April 2026 — Two Modes (Stitch Orange / Mars Clay)</span>
+        <span class="footer-text">Design System v2.7 — April 2026 — All 6 Launch-Page Wireframes</span>
       </div>
       <span class="footer-right">LAB Denim × Jumpsuit — Internal Reference</span>
     </div>
 
   </div><!-- /tab-design -->
+
+
+  <div id="tab-wireframes" class="tab-panel">
+    <style>
+      /* Wireframes tab — light "studio" mode for objective structure review.
+         Intentionally inverts the toolkit's dark Mars Expedition register so
+         a reviewer's eye lands on STRUCTURE, not atmosphere. */
+      #tab-wireframes { background: var(--sand); min-height: calc(100vh - 64px); }
+      #tab-wireframes .ds-section { border-bottom: 1px solid var(--rule-light); }
+      #tab-wireframes .section-label { color: var(--text-muted-light); }
+      #tab-wireframes .section-h2 { color: var(--text-light); }
+      #tab-wireframes .footer { background: var(--sand-dark); border-top: 1px solid var(--rule-light); }
+      #tab-wireframes .footer-text,
+      #tab-wireframes .footer-right { color: var(--text-muted-light); }
+      #tab-wireframes .footer-logo { filter: invert(1) brightness(0.18); }
+
+      /* wf-* utility classes used inline below */
+      #tab-wireframes .wf-eyebrow {
+        font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 600;
+        letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted-light);
+      }
+      #tab-wireframes .wf-card {
+        background: #FFFFFF; border: 1px solid var(--rule-light);
+        padding: 20px 24px;
+      }
+      #tab-wireframes .wf-card-soft {
+        background: var(--wtrlss-cotton); border: 1px solid var(--rule-light);
+      }
+      #tab-wireframes .wf-block-title {
+        font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700;
+        letter-spacing: 1px; text-transform: uppercase; color: var(--text-light);
+        margin-bottom: 6px;
+      }
+      #tab-wireframes .wf-body {
+        font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--text-light);
+      }
+      #tab-wireframes .wf-body-muted {
+        font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--text-muted-light);
+      }
+      #tab-wireframes .wf-note {
+        margin-top: 10px; padding: 8px 14px;
+        background: rgba(196,98,58,0.07); border-left: 3px solid var(--clay);
+        font-size: 12px; line-height: 1.55; color: var(--text-light);
+      }
+      #tab-wireframes .wf-question {
+        background: #FFFFFF; border: 1px solid rgba(196,98,58,0.3);
+        border-left: 3px solid var(--clay);
+        padding: 16px 22px;
+      }
+      #tab-wireframes .wf-question-eyebrow {
+        font-family: 'Space Grotesk', sans-serif; font-size: 9px; font-weight: 700;
+        letter-spacing: 2px; text-transform: uppercase; color: var(--clay);
+        margin-bottom: 8px;
+      }
+      #tab-wireframes .wf-question-h {
+        font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700;
+        color: var(--text-light); margin-bottom: 6px; line-height: 1.4;
+      }
+      #tab-wireframes .wf-xlink {
+        font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 500;
+        color: var(--text-light); text-decoration: underline; text-underline-offset: 3px;
+        text-decoration-color: var(--rule-light);
+      }
+      #tab-wireframes .wf-meta-cell {
+        background: #FFFFFF; border: 1px solid var(--rule-light); padding: 16px 20px;
+      }
+      #tab-wireframes .wf-block-row {
+        background: var(--wtrlss-cotton); border: 1px solid var(--rule-light);
+        padding: 18px 22px; display: flex; gap: 22px; align-items: flex-start;
+      }
+      #tab-wireframes .wf-block-row + .wf-block-row { border-top: none; }
+      #tab-wireframes .wf-block-num {
+        font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700;
+        color: var(--text-light); flex-shrink: 0; padding-right: 18px; margin-top: 1px;
+        letter-spacing: 1px; border-right: 1px solid var(--rule-light); align-self: stretch;
+        min-width: 14px;
+      }
+    </style>
+
+    <!-- 00 Tab Intro -->
+    <div class="ds-section">
+      <span class="section-label">04 — Page Wireframes</span>
+      <h2 class="section-h2">Reactable Page Architecture</h2>
+      <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--text-muted-light);max-width:680px;margin-bottom:32px;">Stripped-back structure for the Launch pages. Use these to react to <strong style="color:var(--text-light);font-weight:500;">what blocks exist and in what order</strong> — not typography, not color, not photography. Visual feel lives in tab 03; the live build lives in <code style="font-family:monospace;color:var(--text-light);background:var(--wtrlss-cotton);padding:1px 6px;">wtrlss-site</code>.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;">
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">How to read</div>
+          <div class="wf-body">Each block is a numbered, named section that will appear top-to-bottom on the live page. Notes flag open questions or pending assets.</div>
+        </div>
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">React to</div>
+          <div class="wf-body">Block presence (is this block needed?), block order (is the rhythm right?), block content (what's missing, what's extra?).</div>
+        </div>
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">Ignore</div>
+          <div class="wf-body">Visual polish, exact wording, color, photography. Those live in tab 03 Visual Language and the site build.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;">
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">Launch pages (May / June)</div>
+          <div class="wf-body-muted">Homepage · The Technology · For Brands · For Factories · Sustainability · Company (Phase 1 stub at launch). Post-launch — Journal, Certified Waterless™, Campaign LPs — not wireframed here yet.</div>
+        </div>
+        <div class="wf-card">
+          <div class="wf-eyebrow" style="margin-bottom:8px;">Status</div>
+          <div class="wf-body-muted">All 6 launch pages wireframed below. Built-state column reflects current wtrlss-site repo: hi-fi means a real Astro page exists; not built means no page in site yet.</div>
+        </div>
+      </div>
+
+      <!-- Jump nav -->
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Jump to page</div>
+      <div style="display:flex;gap:22px;flex-wrap:wrap;">
+        <a href="#wf-page-home" class="wf-xlink">01 — Homepage</a>
+        <a href="#wf-page-technology" class="wf-xlink">02 — The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">03 — For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">04 — For Factories</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">05 — Sustainability</a>
+        <a href="#wf-page-company" class="wf-xlink">06 — Company</a>
+      </div>
+    </div>
+
+
+    <!-- 01 Homepage -->
+    <div class="ds-section" id="wf-page-home">
+      <span class="section-label">Page 01 of 6</span>
+      <h2 class="section-h2">Homepage</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/ &nbsp;&nbsp;·&nbsp;&nbsp; First touchpoint &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
+
+      <!-- Meta -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">All — first touchpoint</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Establish the brand, route visitors to the right pathway, capture email</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Request a Sample / Explore Pathways</div>
+        </div>
+      </div>
+
+      <!-- Blocks header -->
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+
+      <!-- Blocks -->
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">Full-viewport desert hero. Headline leads with creative liberation, not sustainability.</div>
+            <div class="wf-note">Working line: "Denim is held hostage by a 19th century bottleneck. Not anymore."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Standard 0.0 / Technology Intro</div>
+            <div class="wf-body-muted">Category-defining platform intro. WTRLSS Inside framing. Small secret-sauce callout. Links to Technology page for the deep dive.</div>
+            <div class="wf-note">Per Eric/Hunter on 4/22: industry-accurate language, couple paragraphs max, "want to know more" CTA pattern.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Three Pillars</div>
+            <div class="wf-body-muted">Creativity · Speed · Innovation. Each pillar gets a gut-check line from the FINAL voice guide. Not four — three was locked on the 4/22 call.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Pathway Split</div>
+            <div class="wf-body-muted">Brand-led vs. Factory-led routing. Full-viewport split screen. Routes to /for-brands and /for-factories.</div>
+            <div class="wf-note">Sitemap doc routed these to /pathway-a and /pathway-b — the live site uses /for-brands and /for-factories. Confirming routing is the latter.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Sustainability as Proof Layer</div>
+            <div class="wf-body-muted">Stat bar moment. Positioned as supporting evidence, not the lead.</div>
+            <div class="wf-note">Stat conflict pending Hunter call: 55L vs. 26 gallons (≈98L) per pair. Anchor quote: "Regulatory pressure is not a threat. It's a tailwind."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">WTRLSS Inside Badge</div>
+            <div class="wf-body-muted">Certified Waterless badge moment. Bureau Veritas / Stanford / Patent callouts. Cross-link to Sustainability for the detail.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">07</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Product Detail Strip</div>
+            <div class="wf-body-muted">Four denim macro crops — waistband, pocket, care label, label detail. Texture as hero, per Hunter's brand intro deck.</div>
+            <div class="wf-note">4.13 photoshoot delivered (512 frames). Hero candidates: p200 (full model wide-leg), p500 (flat-lay w/ W hang tag). Machine macro NOT yet shot — placeholder until that shoot.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">08</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Email Capture</div>
+            <div class="wf-body-muted">Minimal email gate above footer. No eco-lecture. Working line: "No eco-lectures. Just early access."</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Net-new questions — promoted treatment -->
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Net-new</div>
+          <div class="wf-question-h">SPC acquisition messaging — where does it live?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">June launch story includes Waterless acquiring SPC. Folded into Hero / Standard 0.0 framing, or its own block?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Net-new</div>
+          <div class="wf-question-h">Triarchy quote slot — where, when?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Hunter floated Triarchy as an early partner quote pre-July (before Levi's reveal). Add a quote block near pillars or post-pathway? Toggleable per launch phase?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Net-new</div>
+          <div class="wf-question-h">Levi's reveal moment (July 9–13) — homepage shift?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Does the hero shift for the Levi's reveal week, or does the reveal live on a campaign LP and the homepage stays steady?</div>
+        </div>
+      </div>
+
+      <!-- Cross-links -->
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+      </div>
+    </div>
+
+
+    <!-- 02 The Technology -->
+    <div class="ds-section" id="wf-page-technology">
+      <span class="section-label">Page 02 of 6</span>
+      <h2 class="section-h2">The Technology</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/technology &nbsp;&nbsp;·&nbsp;&nbsp; Credibility anchor &nbsp;&nbsp;·&nbsp;&nbsp; Not yet built in wtrlss-site (exists in mockups)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">All — credibility anchor for brands, factories, press, investors</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Tell the science and process story. Establish WTRLSS as a platform, not a product.</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Request a Sample / Download White Paper</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">"Standard 0.0" — the world's first bio-based digital dyeing platform. Industry-accurate language, not consumer fluff.</div>
+            <div class="wf-note">Per Hunter on 4/22: "Use the language the industry uses. Otherwise we look like we don't know what we're talking about."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">How It Works</div>
+            <div class="wf-body-muted">Step-by-step process: 1 step replaces 10. Visual comparison — traditional wet process vs WTRLSS. Interactive if budget allows.</div>
+            <div class="wf-note">Pending: Eric's tech explainer doc + Hunter's deeper science slides. Machine photos NOT yet shot — placeholder for visual comparison.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">MultiActiv Dyes — the Multi-Reactive Category</div>
+            <div class="wf-body-muted">Named chemistry — bio-based dye class. What it is, why it differs from petrochemical dyes. Frame as the new <em>multi-reactive</em> category WTRLSS is creating.</div>
+            <div class="wf-note">Confirm with Hunter: is "MultiActiv Dyes" the public-facing name? Multi-reactive category framing was the 4/22 throughline — should it lead this page or the Hero block?</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Dr. Mheidle Profile</div>
+            <div class="wf-body-muted">Award-winning Swiss scientist, 30 years at the engineering / bioscience / digital intersection. Credibility anchor.</div>
+            <div class="wf-note">Need photo, bio, quote. Confirm spelling — sitemap doc and Granola transcripts have differed (Mheidle / Mighty / Mickaël).</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Key Stats</div>
+            <div class="wf-body-muted">99.97% water reduction · 97% emissions reduction · 30–45% capacity increase · 3× faster · 99% bio-based (1% is the ink).</div>
+            <div class="wf-note">Stat conflict still pending: 55L vs. 26 gallons (≈98L). Hunter call to confirm which is the canonical primary stat.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certifications</div>
+            <div class="wf-body-muted">Bureau Veritas RSL · Stanford validation · Patent portfolio. Cross-link to Sustainability for the full table.</div>
+            <div class="wf-note">Pending: certification docs from Waterless team.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">07</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">White Paper Gate</div>
+            <div class="wf-body-muted">Email capture for technical white paper download. "Want to know more — here's the deeper read."</div>
+            <div class="wf-note">Phase 1 — needs white paper asset from Hunter/Eric. Until then, this block holds a "coming soon" stub or is hidden.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Lead framing</div>
+          <div class="wf-question-h">Does the page lead with "Standard 0.0" or with "Multi-Reactive category creation"?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">4/22 call surfaced the multi-reactive framing as the throughline. Sitemap doc still leads with Standard 0.0. One can be hero, the other supports — which?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Depth tier</div>
+          <div class="wf-question-h">Hero couple-paragraphs vs. interactive deep-dive — what's the split?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Eric on 4/22: hero short, "want to know more" tier for technical depth. How interactive is the deep-dive — animated process diagram, or static visual?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Asset gating</div>
+          <div class="wf-question-h">Until machine photos exist, what holds the visual weight?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">No machine shoot yet. Placeholder options: process diagrams, denim macro from 4.13 shoot, illustrated diagram, or hold the page back until shoot lands.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+      </div>
+    </div>
+
+
+    <!-- 03 For Brands -->
+    <div class="ds-section" id="wf-page-for-brands">
+      <span class="section-label">Page 03 of 6</span>
+      <h2 class="section-h2">For Brands</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/for-brands &nbsp;&nbsp;·&nbsp;&nbsp; Brand-led pathway &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Brand Innovation Directors, Creative Directors, Sustainability leads</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Convert brand interest into sample requests and partnership conversations</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Request a Sample</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">Design-first framing. Creative liberation as the hook.</div>
+            <div class="wf-note">Working line: "If you can dream it, we can dye it." Voice pillar — invention with a hint of magic.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">What's Possible</div>
+            <div class="wf-body-muted">Complex gradients, hyper-customized designs, surgical precision at global scale. Visual examples of what only WTRLSS can do.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Speed Section</div>
+            <div class="wf-body-muted">Sample in days. Design-to-production in 6 months, not 18. Mid-season color renewal.</div>
+            <div class="wf-note">"Imagination made instant" — voice pillar throughline. "Production at the speed of culture" is an alt framing in the bank.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certified Waterless Badge</div>
+            <div class="wf-body-muted">Badge application CTA. Bureau Veritas / Stanford callouts. Cross-links to For Factories — badge lives on both pathways, not siloed.</div>
+            <div class="wf-note">"Wear the badge. Own the story."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Co-Marketing Toolkit</div>
+            <div class="wf-body-muted">Email-gated download. Name / Brand / Work Email capture. Toolkit contents list.</div>
+            <div class="wf-note">COPY PLACEHOLDER — awaiting Eric's brand doc for final copy.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Case Studies / Partners</div>
+            <div class="wf-body-muted">Partner roster module. Held off until July per partner-sequencing rule.</div>
+            <div class="wf-note">Pre-July: no named brands publicly. Triarchy quote candidate. Levi's reveal July 9–13. PacSun first-to-market August.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">07</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Sample Request Form</div>
+            <div class="wf-body-muted">Full form: name, brand, role, fabric type, timeline, notes. Phase 4 wires CRM-integrated lead capture.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Partner moment</div>
+          <div class="wf-question-h">Where does the Triarchy quote slot sit — here or homepage?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">If homepage holds the early partner moment, this page can stay clean. If For Brands is the partner-evidence page, the quote belongs in block 06.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Pre-July state</div>
+          <div class="wf-question-h">What does block 06 show before brand names can go public?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Options: hide block until July, "Major denim heritage brand — coming July" stub, generic case-study category cards, or skip entirely until reveals land.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Co-marketing kit timing</div>
+          <div class="wf-question-h">Toolkit gated download live at launch, or post-launch?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">If Eric's brand doc lands before June, this is launch-ready. If not, gate goes "Coming Soon" stub — preferable to placeholder copy.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+      </div>
+    </div>
+
+
+    <!-- 04 For Factories -->
+    <div class="ds-section" id="wf-page-for-factories">
+      <span class="section-label">Page 04 of 6</span>
+      <h2 class="section-h2">For Factories</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/for-factories &nbsp;&nbsp;·&nbsp;&nbsp; Factory-led pathway &nbsp;&nbsp;·&nbsp;&nbsp; Currently built in wtrlss-site (hi-fi)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Factory Operations Directors, Production Managers, Owners</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Make the business case for WTRLSS adoption. Route to partnership inquiry.</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Get in Touch / Partner Inquiry</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">Business-case-first framing. Light variant of the homepage hero pattern.</div>
+            <div class="wf-note">Working line: "This isn't an upgrade. It's an evolution."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">The Business Case</div>
+            <div class="wf-body-muted">1 step replaces 10 · 30–45% faster · zero wastewater · 99% bio-based. ROI framing.</div>
+            <div class="wf-note">"You don't just survive the 21st century. You lead it."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Operational Advantages — Produce Anywhere</div>
+            <div class="wf-body-muted">No water infrastructure. No effluent treatment. Produce nearshore, onshore, in the desert. Absorbs the earlier "Produce Anywhere" pillar.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certified Waterless Badge</div>
+            <div class="wf-body-muted">Factory certification CTA. "Certify your factory. Attract better brands." Cross-links to For Brands.</div>
+            <div class="wf-note">Badge lives on both pathways — not siloed. Same badge content, different framing per audience.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Compliance as an Asset</div>
+            <div class="wf-body-muted">Regulatory tailwind section. EU Green Deal / US water regulations. "Turn sustainability from a constraint into a competitive advantage."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Partner Inquiry Form</div>
+            <div class="wf-body-muted">Factory name, location, current capacity, timeline, contact info. Replaces a standalone Partners page.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Asset readiness</div>
+          <div class="wf-question-h">Machine photos for credibility — what fills the gap until the shoot?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Factories want to see hardware. No machine photos yet. Use process diagrams, denim macro, or render — or hold this page until photos exist?</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Compliance specificity</div>
+          <div class="wf-question-h">Which regulations to cite by name?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">EU Green Deal / ESPR 2027 / US wastewater rules — Eric to scope what's defensible without legal review pushback.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-sustainability" class="wf-xlink">Sustainability</a>
+      </div>
+    </div>
+
+
+    <!-- 05 Sustainability -->
+    <div class="ds-section" id="wf-page-sustainability">
+      <span class="section-label">Page 05 of 6</span>
+      <h2 class="section-h2">Sustainability</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/sustainability &nbsp;&nbsp;·&nbsp;&nbsp; Proof layer &nbsp;&nbsp;·&nbsp;&nbsp; Not yet built in wtrlss-site</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Press, investors, regulatory, conscious consumers</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">House the certifications, water metrics, and regulatory data. "The boring stuff, nicely housed."</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Download Certification Summary</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Hero</div>
+            <div class="wf-body-muted">"Regulatory pressure is not a threat. It's a tailwind." Hunter's anchor line.</div>
+            <div class="wf-note">Pending: Eric's sustainability copy. Voice register here is grounded and confident, not preachy.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Water Metrics</div>
+            <div class="wf-body-muted">Primary water stat · 99.97% reduction · 0.42kg CO₂ per jean. Sourced, verifiable.</div>
+            <div class="wf-note">Stat conflict pending Hunter call: 55L vs. 26 gallons (≈98L). Use dyeing-process stats only — not full cotton lifecycle (would invite greenwashing pushback).</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certifications Table</div>
+            <div class="wf-body-muted">Bureau Veritas RSL · Stanford validation · Patent portfolio. Status badges per item.</div>
+            <div class="wf-note">Pending: certification docs from Waterless team.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Regulatory Landscape</div>
+            <div class="wf-body-muted">EU Green Deal / ESPR 2027 / US water regulations. WTRLSS as a compliance solution, not just good intention.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Claims Library</div>
+            <div class="wf-body-muted">Sourced, defensible claims. Prevents greenwashing liability.</div>
+            <div class="wf-note">Pending: claims library from Eric. Public page or download-gated? Eric to scope.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">06</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Certification Download Gate</div>
+            <div class="wf-body-muted">Email capture for certification summary PDF.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — Visual treatment</div>
+          <div class="wf-question-h">"Boring stuff, nicely housed" — how table-heavy vs. editorial?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Lean on tables for credibility (regulatory feel) or editorialize each cert block (brand-feel)? Trade-off: scanability vs. warmth.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Stat resolution</div>
+          <div class="wf-question-h">Which water stat is the canonical primary?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Existing: 55L vs. 1 tablespoon. Brand Guide WIP: 26 gallons (≈98L) → 1 tablespoon. Different baselines? Hunter call resolves.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Claims gating</div>
+          <div class="wf-question-h">Claims library — public or download-only?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Public = transparency signal. Gated = lead-capture + signals seriousness. Eric's call.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+        <a href="#wf-page-for-factories" class="wf-xlink">For Factories</a>
+      </div>
+    </div>
+
+
+    <!-- 06 Company -->
+    <div class="ds-section" id="wf-page-company">
+      <span class="section-label">Page 06 of 6</span>
+      <h2 class="section-h2">Company</h2>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;color:var(--text-muted-light);margin-bottom:32px;">/about &nbsp;&nbsp;·&nbsp;&nbsp; Phase 1 stub at launch &nbsp;&nbsp;·&nbsp;&nbsp; Thin in wtrlss-site (113 lines)</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:36px;">
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Audience</div>
+          <div class="wf-body">Press, investors, potential partners, curious consumers</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Purpose</div>
+          <div class="wf-body">Tell the founding story. Establish credibility through team and mission.</div>
+        </div>
+        <div class="wf-meta-cell">
+          <div class="wf-eyebrow" style="font-size:9px;margin-bottom:8px;">Primary CTA</div>
+          <div class="wf-body">Get in Touch</div>
+        </div>
+      </div>
+
+      <div class="wf-eyebrow" style="margin-bottom:12px;">Content Blocks (top → bottom)</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:40px;">
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">01</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Mission</div>
+            <div class="wf-body-muted">"The future of denim is dry." Plus the post-water-era framing.</div>
+            <div class="wf-note">Vision statement is locked: "The future of denim is dry." Mission anchor: "Impossible is the new normal."</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">02</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">SPC Acquisition — June Launch Story</div>
+            <div class="wf-body-muted">Waterless is acquiring SPC. The June launch piece. Frame as the platform getting bigger, not just the chemistry getting cooler.</div>
+            <div class="wf-note">NEW BLOCK — not in original sitemap. SPC was confirmed as part of June launch on the 4/22 call. Confirm: lives on Company, or its own page, or homepage Hero?</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">03</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Founding Team</div>
+            <div class="wf-body-muted">Dr. Mickaël Mheidle (inventor, Swiss scientist) + Kareem 'Biggs' Burke (co-founder, Roc-A-Fella, denim background).</div>
+            <div class="wf-note">Need photos, bios, quotes. Biggs is a major cultural signal — confirm prominence at launch vs. holding for the cultural moment (Paper Planes, Levi's reveal).</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">04</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">The Story</div>
+            <div class="wf-body-muted">How a 19th-century process became a 21st-century platform. Origin narrative.</div>
+          </div>
+        </div>
+
+        <div class="wf-block-row">
+          <span class="wf-block-num">05</span>
+          <div style="flex:1;">
+            <div class="wf-block-title">Press / Media</div>
+            <div class="wf-body-muted">Press kit download, media contact, logo assets.</div>
+            <div class="wf-note">Phase 1 — fleshed out post-launch. At launch this can be a thin "press@waterless..." contact line + future home for press kit.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wf-eyebrow" style="color:var(--clay);margin-bottom:14px;">Questions for review</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:36px;">
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">01 — SPC placement</div>
+          <div class="wf-question-h">SPC acquisition — Company page block, Homepage block, or its own page?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">June launch story includes the acquisition. Belongs in Company narrative, but might also need a homepage moment. Confirm with Hunter on his weight + visibility.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">02 — Biggs prominence</div>
+          <div class="wf-question-h">Lead with co-founder identity at launch, or hold for the cultural moment?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Cultural credibility lever. Argument for prominent: signals authenticity. Argument for held: bigger reveal moment with Paper Planes / Levi's tie-in.</div>
+        </div>
+        <div class="wf-question">
+          <div class="wf-question-eyebrow">03 — Stub depth</div>
+          <div class="wf-question-h">What's the minimum viable Company page at launch?</div>
+          <div class="wf-body-muted" style="font-size:12.5px;">Mission + SPC mention + small team blurb might be enough. Full founder profiles, story narrative, press kit can be Phase 1 post-launch. Confirm scope.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;">
+        <span class="wf-eyebrow" style="font-size:9px;">Cross-links to</span>
+        <a href="#wf-page-technology" class="wf-xlink">The Technology</a>
+        <a href="#wf-page-for-brands" class="wf-xlink">For Brands</a>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <div class="footer-left">
+        <img class="footer-logo" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663333462205/EWY8CXwxodaY2xXHahsyWa/WTRLSS_Logo-TM-White_RGB_f801043e.png" alt="WTRLSS" />
+        <span class="footer-text">Design System v2.7 — April 2026 — All 6 Launch-Page Wireframes</span>
+      </div>
+      <span class="footer-right">Waterless — Internal Reference</span>
+    </div>
+
+  </div><!-- /tab-wireframes -->
 
   <script>
     function switchTab(id, btn) {
